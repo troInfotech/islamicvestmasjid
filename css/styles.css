@@ -323,6 +323,7 @@ img {
   background: linear-gradient(135deg, var(--midnight) 0%, var(--deep-blue) 100%);
   padding: 0;
   box-shadow: var(--shadow);
+  min-height: 70px;
 }
 
 .nav-container {
@@ -1495,9 +1496,26 @@ img {
 }
 
 @media (max-width: 768px) {
+  /* Navigation */
+  .nav-container {
+    padding: 0 15px;
+  }
+  
+  .nav-logo img {
+    height: 40px;
+  }
+  
+  .nav-logo-text .mosque-name {
+    font-size: 1.1rem;
+  }
+  
+  .nav-logo-text .tagline {
+    font-size: 0.65rem;
+  }
+  
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
     right: 0;
     background: var(--midnight);
@@ -1506,6 +1524,10 @@ img {
     gap: 0;
     transform: translateY(-150%);
     transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
   }
   
   .nav-menu.active {
@@ -1516,46 +1538,117 @@ img {
     padding: 15px 20px;
   }
   
+  .nav-donate {
+    margin: 10px 0 !important;
+  }
+  
   .nav-toggle {
     display: flex;
   }
   
   .theme-toggle {
     position: absolute;
-    right: 130px;
+    right: 115px;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 0;
+    width: 40px;
+    height: 40px;
+    padding: 8px 10px;
   }
   
   .lang-toggle {
     position: absolute;
-    right: 70px;
+    right: 65px;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 0;
+    min-width: 45px;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
   }
   
+  /* Hero Sections */
+  .hero-prayer {
+    padding: 100px 15px 40px;
+  }
+  
+  .prayer-hero-header h1 {
+    font-size: 2rem;
+  }
+  
+  .prayer-hero-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-home {
+    padding: 100px 15px 60px;
+    min-height: 70vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  /* Prayer Times */
   .prayer-times-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .prayer-hero-header h1 {
-    font-size: 2.5rem;
+  .prayer-card {
+    padding: 20px 15px;
   }
   
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .prayer-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .prayer-card .time {
+    font-size: 1.5rem;
   }
   
   .prayer-widget-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   
+  .prayer-widget-item {
+    padding: 15px 8px;
+  }
+  
+  /* Sections */
+  .services-section,
+  .about-section,
+  .events-section,
+  .scholars-section,
+  .donate-cta,
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title p {
+    font-size: 1.05rem;
+  }
+  
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr;
   }
   
+  .footer {
+    padding: 60px 0 30px;
+  }
+  
+  /* Other Elements */
   .jummah-times {
     flex-direction: column;
     gap: 30px;
@@ -1582,15 +1675,106 @@ img {
   .timeline-content {
     width: 100%;
   }
+  
+  .page-header {
+    padding: 120px 15px 60px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Navigation */
+  .nav-container {
+    padding: 0 10px;
+  }
+  
+  .nav-logo {
+    gap: 8px;
+    padding: 10px 0;
+  }
+  
+  .nav-logo img {
+    height: 32px;
+  }
+  
+  .nav-logo-text .mosque-name {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-logo-text .tagline {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-toggle {
+    padding: 5px;
+  }
+  
+  .nav-toggle span {
+    width: 22px;
+  }
+  
+  .theme-toggle {
+    right: 90px;
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  
+  .lang-toggle {
+    right: 52px;
+    min-width: 36px;
+    height: 34px;
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+  
+  /* Prayer Times */
   .prayer-times-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .prayer-card {
+    padding: 25px 20px;
   }
   
   .prayer-widget-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .prayer-widget {
+    padding: 25px 15px;
+  }
+  
+  /* Hero Sections */
+  .hero-prayer {
+    padding: 90px 10px 30px;
+  }
+  
+  .prayer-hero-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .prayer-hero-header .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
   }
   
   .hero-buttons {
@@ -1600,14 +1784,191 @@ img {
   
   .btn {
     justify-content: center;
+    padding: 14px 28px;
+    font-size: 1rem;
   }
   
+  /* Sections */
   .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title p {
+    font-size: 0.95rem;
+  }
+  
+  .services-section,
+  .about-section,
+  .events-section,
+  .scholars-section,
+  .donate-cta,
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Service Cards */
+  .service-card,
+  .event-card,
+  .scholar-card {
+    padding: 25px 18px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .service-card .icon {
+    width: 65px;
+    height: 65px;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+  
+  /* About Section */
+  .about-content h2 {
     font-size: 2rem;
   }
   
+  .about-content p {
+    font-size: 1.05rem;
+  }
+  
+  /* Donate CTA */
   .donate-cta h2 {
+    font-size: 1.8rem;
+  }
+  
+  .donate-cta p {
+    font-size: 1.05rem;
+  }
+  
+  /* Contact */
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-item .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
+  }
+  
+  /* Page Header */
+  .page-header {
+    padding: 110px 15px 50px;
+  }
+  
+  .page-header h1 {
     font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  .footer-about h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-about p {
+    font-size: 0.95rem;
+  }
+  
+  .footer-links h4 {
+    font-size: 1.1rem;
+  }
+  
+  /* Jummah Section */
+  .jummah-section {
+    padding: 25px 15px;
+  }
+  
+  .jummah-section h3 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .jummah-time .time {
+    font-size: 1.6rem;
+  }
+  
+  /* Scholars */
+  .scholar-image {
+    height: 220px;
+    font-size: 4rem;
+  }
+  
+  /* Announcement Banner */
+  .announcement-banner {
+    padding: 15px 10px;
+  }
+  
+  .announcement-banner p {
+    font-size: 0.95rem;
+  }
+  
+  /* Event Cards */
+  .event-card {
+    margin-bottom: 20px;
+  }
+  
+  .event-content {
+    padding: 20px 18px;
+  }
+  
+  .event-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .event-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Program Cards */
+  .program-card {
+    padding: 20px 15px;
+  }
+  
+  .program-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .program-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Services Grid */
+  .services-grid {
+    gap: 20px;
+  }
+  
+  /* Events Grid */
+  .events-grid {
+    gap: 20px;
+  }
+  
+  /* Better text wrapping */
+  p, li, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -1651,5 +2012,61 @@ img {
   animation: pulse 2s infinite;
   border-color: var(--primary-gold);
   background: rgba(212, 168, 83, 0.2);
+}
+
+/* ===== Responsive iFrame (Prayer Times Widget) ===== */
+@media (max-width: 768px) {
+  iframe[title="Prayer Times Widget"] {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px;
+  }
+  
+  /* Wrapper for iframe */
+  iframe[title="Prayer Times Widget"]:not([style*="width: 100%"]) {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 143% !important;
+    margin-left: -21.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe[title="Prayer Times Widget"]:not([style*="width: 100%"]) {
+    transform: scale(0.55);
+    transform-origin: top left;
+    width: 182% !important;
+    margin-left: -41%;
+    margin-top: -80px;
+  }
+}
+
+/* ===== Contact/Info Card Responsiveness ===== */
+@media (max-width: 768px) {
+  .contact-item .content h4 {
+    font-size: 1.05rem;
+  }
+  
+  .contact-item .content p {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item .content h4 {
+    font-size: 0.95rem;
+  }
+  
+  .contact-item .content p {
+    font-size: 0.85rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  
+  /* Ensure long text wraps properly */
+  .contact-item .content p br {
+    display: none;
+  }
 }
 

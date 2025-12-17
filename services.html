@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Islamic Center Services - Prayers, Education, Funerals, Marriages, and Community Programs">
+  <meta name="keywords" content="Islamic Center, Services, Prayers, Education, Funeral, Marriage, Community">
+  <title>Services | Islamisk Center Vest Albertslund</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🕌%3C/text%3E%3C/svg%3E">
+  
+  <style>
+    .service-detail {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background-image: url('assets/images/pattern/pattern1.png'), linear-gradient(to bottom, var(--white), var(--white));
+      background-repeat: repeat, no-repeat;
+      background-size: auto, cover;
+      background-position: center, center;
+      background-blend-mode: overlay;
+      opacity: 0.98;
+    }
+    
+    .service-detail:nth-child(even) {
+      background-image: url('assets/images/pattern/pattern1.png'), linear-gradient(to bottom, var(--cream), var(--cream));
+      background-repeat: repeat, no-repeat;
+      background-size: auto, cover;
+      background-position: center, center;
+      background-blend-mode: overlay;
+      opacity: 0.98;
+    }
+    
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .service-detail:nth-child(even) .service-detail-grid {
+      direction: rtl;
+    }
+    
+    .service-detail:nth-child(even) .service-detail-grid > * {
+      direction: ltr;
+    }
+    
+    .service-detail-content h2 {
+      font-size: 2.2rem;
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+    
+    .service-detail-content h3 {
+      color: var(--text-dark);
+    }
+    
+    .service-detail-content p {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    
+    .service-detail-content ul {
+      list-style: none;
+      margin: 25px 0;
+    }
+    
+    .service-detail-content ul li {
+      padding: 10px 0;
+      padding-left: 30px;
+      position: relative;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+    
+    .service-detail-content ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-gold);
+      font-weight: bold;
+    }
+    
+    .service-icon-large {
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .program-card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow-soft);
+      border-left: 4px solid var(--primary-gold);
+    }
+    
+    .program-card h4 {
+      color: var(--primary-green);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    .program-card .time {
+      color: var(--primary-gold);
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .program-card p {
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .service-detail-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .service-detail:nth-child(even) .service-detail-grid {
+        direction: ltr;
+      }
+      
+      .service-icon-large {
+        height: 250px;
+        font-size: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">
+        <img src="assets/images/logonew.png" alt="Islamisk Center Vest Logo" style="height: 50px; width: auto; margin-right: 15px;">
+        <span class="nav-logo-text">
+          <span class="mosque-name">Islamisk Center Vest</span>
+          <span class="tagline">Albertslund</span>
+        </span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+        <li><a href="home.html" data-translate="home">Home</a></li>
+        <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+        <li><a href="services.html" class="active" data-translate="services">Services</a></li>
+        <li><a href="contact.html" data-translate="contact">Contact</a></li>
+        <li><a href="home.html#donate" class="nav-donate" data-translate="donate">Donate</a></li>
+      </ul>
+      
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+        EN
+      </button>
+      
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background-image: linear-gradient(rgba(13, 19, 33, 0.85), rgba(26, 39, 68, 0.85)), url('assets/images/HeroImage.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+    <h1 data-translate="servicesTitle">Our Services</h1>
+    <p data-translate="servicesSubtitle">Serving the community with faith, dedication, and compassion</p>
+  </section>
+
+  <!-- Daily Prayers -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-hands-praying" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="dailyPrayersService">Daily Prayers</span></h2>
+          <p data-translate="dailyPrayersServiceText1">Join us for the five daily congregational prayers in our beautiful prayer hall. Our masjid is open throughout the day for individual and congregational worship.</p>
+          <p data-translate="dailyPrayersServiceText2">We maintain a welcoming atmosphere for both brothers and sisters, with separate prayer areas available.</p>
+          <ul>
+            <li data-translate="dailyPrayersFeature1">Five daily prayers with congregation</li>
+            <li data-translate="dailyPrayersFeature2">Spacious prayer halls for men and women</li>
+            <li data-translate="dailyPrayersFeature3">Clean wudu facilities available</li>
+            <li data-translate="dailyPrayersFeature4">Handicap accessible entrance and facilities</li>
+            <li data-translate="dailyPrayersFeature5">Childcare available during select prayers</li>
+          </ul>
+          <a href="index.html" class="btn btn-primary">
+            <i class="fas fa-clock"></i> <span data-translate="viewPrayerTimes">View Prayer Times</span>
+          </a>
+        </div>
+        <div class="service-icon-large">🕌</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jummah Prayer -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-mosque" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="jumuahServiceTitle">Jumu'ah (Friday) Prayer</span></h2>
+          <p data-translate="jumuahServiceText1">The Friday congregational prayer is the highlight of our week. Join hundreds of community members for the weekly sermon and prayer.</p>
+          <p data-translate="jumuahServiceText2">We offer multiple Jumu'ah services to accommodate our growing community.</p>
+          <ul>
+            <li><strong data-translate="jumuahFeature1">First Jumu'ah:</strong> <span data-translate="jumuahFeature1Text">Khutbah at 1:00 PM, Prayer at 1:30 PM</span></li>
+            <li><strong data-translate="jumuahFeature2">Second Jumu'ah:</strong> <span data-translate="jumuahFeature2Text">Khutbah at 2:00 PM, Prayer at 2:30 PM</span></li>
+            <li data-translate="jumuahFeature3">Inspiring khutbahs by our resident scholars</li>
+            <li data-translate="jumuahFeature4">Topics relevant to contemporary Muslim life</li>
+            <li data-translate="jumuahFeature5">Overflow area with live audio/video</li>
+          </ul>
+        </div>
+        <div class="service-icon-large">🤲</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Islamic Education -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-book-quran" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="islamicEducationService">Islamic Education</span></h2>
+          <p data-translate="islamicEducationServiceText">We offer comprehensive Islamic education programs for all ages, from young children to adults. Our qualified teachers provide instruction in Quran, Arabic, and Islamic studies.</p>
+          
+          <div class="programs-grid">
+            <div class="program-card">
+              <h4 data-translate="weekendSchool">Weekend Islamic School</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="weekendSchoolTime">Saturdays, 10:30 AM - 2:00 PM</span></div>
+              <p data-translate="weekendSchoolDesc">Arabic language and Islamic studies for children ages 4-15.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="quranMemorization">Quran Memorization (Hifz)</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="quranMemorizationTime">Daily, 4:00 PM - 6:00 PM</span></div>
+              <p data-translate="quranMemorizationDesc">Structured program for children and adults to memorize the Holy Quran.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="adultIslamic">Adult Islamic Studies</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="adultIslamicTime">Mon & Wed, 6:30 PM - 8:30 PM</span></div>
+              <p data-translate="adultIslamicDesc">Comprehensive courses on Fiqh, Aqeedah, Seerah, and Tafsir for ages 16+.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="quranTafsir">Quran Tafsir</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="quranTafsirTime">Saturdays, 7:00 PM - 8:00 PM</span></div>
+              <p data-translate="quranTafsirDesc">Deep dive into the meanings and interpretations of the Holy Quran.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-icon-large">📖</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Youth Programs -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-users" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="youthProgramsService">Youth Programs</span></h2>
+          <p data-translate="youthProgramsServiceText">Our youth programs are designed to nurture the next generation of Muslim leaders. We provide safe, engaging environments for young people to grow in faith and character.</p>
+          
+          <div class="programs-grid">
+            <div class="program-card">
+              <h4 data-translate="teenTalk">Teen Talk (Ages 14-17)</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="teenTalkTime">Tuesdays, 5:15 PM - 6:15 PM</span></div>
+              <p data-translate="teenTalkDesc">Open discussion on topics relevant to Muslim teens today.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="fridayYouth">Friday Night Youth Program</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="fridayYouthTime">Fridays, 7:00 PM - 10:00 PM</span></div>
+              <p data-translate="fridayYouthDesc">Fun activities, sports, discussions, and social time for young Muslims.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="muslimScouts">Muslim Scouts</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="muslimScoutsTime">Bi-weekly Saturdays</span></div>
+              <p data-translate="muslimScoutsDesc">Character development, outdoor activities, and Islamic values.</p>
+            </div>
+            
+            <div class="program-card">
+              <h4 data-translate="collegeCircle">College Student Circle</h4>
+              <div class="time"><i class="fas fa-calendar"></i> <span data-translate="collegeCircleTime">Sundays, 6:00 PM</span></div>
+              <p data-translate="collegeCircleDesc">Support and discussion group for Muslim university students.</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-icon-large">🎓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funeral Services -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-heart" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="funeralServicesService">Funeral Services</span></h2>
+          <p data-translate="funeralServicesServiceText">During times of loss, our community comes together to support grieving families. We provide complete Islamic funeral services with compassion and dignity.</p>
+          <ul>
+            <li data-translate="funeralFeature1">Ghusl (ritual washing) performed by trained volunteers</li>
+            <li data-translate="funeralFeature2">Kafan (shrouding) provided</li>
+            <li data-translate="funeralFeature3">Janazah prayer at the masjid</li>
+            <li data-translate="funeralFeature4">Coordination with local Muslim cemeteries</li>
+            <li data-translate="funeralFeature5">Bereavement support and counseling</li>
+            <li data-translate="funeralFeature6">Memorial gatherings and condolence services</li>
+            <li data-translate="funeralFeature7">24/7 emergency assistance available</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fas fa-phone"></i> <span data-translate="contactUs">Contact Us</span>
+          </a>
+        </div>
+        <div class="service-icon-large">🤲</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marriage Services -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-ring" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="marriageServicesService">Marriage Services</span></h2>
+          <p data-translate="marriageServicesServiceText">We celebrate the blessed union of marriage in accordance with Islamic traditions. Our Imam performs Nikah ceremonies and provides pre-marital counseling.</p>
+          <ul>
+            <li data-translate="marriageFeature1">Nikah (Islamic marriage) ceremonies</li>
+            <li data-translate="marriageFeature2">Pre-marital counseling sessions</li>
+            <li data-translate="marriageFeature3">Islamic marriage certificates</li>
+            <li data-translate="marriageFeature4">Venue available for walima (reception)</li>
+            <li data-translate="marriageFeature5">Marriage counseling for couples</li>
+            <li data-translate="marriageFeature6">Family mediation services</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> <span data-translate="scheduleConsultation">Schedule a Consultation</span>
+          </a>
+        </div>
+        <div class="service-icon-large">💍</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charity & Zakat -->
+  <section class="service-detail">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <h2><i class="fas fa-hand-holding-heart" style="color: var(--primary-gold); margin-right: 15px;"></i><span data-translate="charityZakatService">Charity & Zakat</span></h2>
+          <p data-translate="charityZakatServiceText">We collect and distribute Zakat, Sadaqah, and Fitrah to support those in need. Your charitable contributions make a real difference in the lives of community members.</p>
+          <ul>
+            <li data-translate="charityFeature1">Zakat collection and distribution</li>
+            <li data-translate="charityFeature2">Sadaqah and general charity</li>
+            <li data-translate="charityFeature3">Zakat al-Fitr collection before Eid</li>
+            <li data-translate="charityFeature4">Emergency financial assistance</li>
+            <li data-translate="charityFeature5">Food pantry and meal programs</li>
+            <li data-translate="charityFeature6">Scholarship funds for students</li>
+            <li data-translate="charityFeature7">Orphan sponsorship programs</li>
+          </ul>
+          <a href="home.html#donate" class="btn btn-primary">
+            <i class="fas fa-heart"></i> <span data-translate="donateNow">Donate Now</span>
+          </a>
+        </div>
+        <div class="service-icon-large">💝</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="donate-cta">
+    <div class="container">
+      <h2 data-translate="needServices">Need Our Services?</h2>
+      <p data-translate="needServicesDesc">Contact us to learn more about any of our services or to schedule an appointment with our Imam.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> <span data-translate="contactUs">Contact Us</span>
+        </a>
+        <a href="index.html" class="btn btn-secondary">
+          <i class="fas fa-clock"></i> <span data-translate="prayerTimes">Prayer Times</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary-gold); font-size: 1.8rem;">Islamisk Center Vest Albertslund</h3>
+          <p data-translate="footerAbout">A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+            <li><a href="home.html" data-translate="home">Home</a></li>
+            <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-translate="services">Services</a></li>
+            <li><a href="contact.html" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="servicesFooter">Services</h4>
+          <ul>
+            <li><a href="services.html" data-translate="dailyPrayers">Daily Prayers</a></li>
+            <li><a href="services.html" data-translate="jumuahPrayer">Jummah Prayer</a></li>
+            <li><a href="services.html" data-translate="islamicEducation">Islamic Education</a></li>
+            <li><a href="services.html" data-translate="funeralServices">Funeral Services</a></li>
+            <li><a href="services.html" data-translate="marriageServices">Marriage Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="contactFooter">Contact</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-translate="locationText">Albertslund, Denmark</span></li>
+            <li><i class="fas fa-phone"></i> <span data-translate="phoneText">+45 XX XX XX XX</span></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> <span data-translate="emailText">info@icvalbertslund.dk</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Islamisk Center Vest Albertslund. <span data-translate="copyright">All Rights Reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the Islamic Center's history, mission, and community">
+  <meta name="keywords" content="Islamic Center, About, History, Mission, Muslim Community">
+  <title>About Us | Islamisk Center Vest Albertslund</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🕌%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">
+        <img src="assets/images/logonew.png" alt="Islamisk Center Vest Logo" style="height: 50px; width: auto; margin-right: 15px;">
+        <span class="nav-logo-text">
+          <span class="mosque-name">Islamisk Center Vest</span>
+          <span class="tagline">Albertslund</span>
+        </span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+        <li><a href="home.html" data-translate="home">Home</a></li>
+        <li><a href="about.html" class="active" data-translate="aboutUs">About Us</a></li>
+        <li><a href="services.html" data-translate="services">Services</a></li>
+        <li><a href="contact.html" data-translate="contact">Contact</a></li>
+        <li><a href="home.html#donate" class="nav-donate" data-translate="donate">Donate</a></li>
+      </ul>
+      
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+        EN
+      </button>
+      
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background-image: linear-gradient(rgba(13, 19, 33, 0.85), rgba(26, 39, 68, 0.85)), url('assets/images/HeroImage.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+    <h1 data-translate="aboutTitle">About Our Center</h1>
+    <p data-translate="aboutSubtitle">A home for faith, learning, and community since our founding</p>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="about-section" style="background-color: var(--white); background-image: url('assets/images/pattern/pattern1.png'); background-repeat: repeat; background-size: auto; background-position: center; background-blend-mode: overlay;">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2 data-translate="ourMission">Our Mission</h2>
+          <p data-translate="missionText">Islamisk Center Vest Albertslund is dedicated to serving the Muslim community and fostering interfaith understanding. We strive to provide a welcoming environment for worship, education, and community building.</p>
+          <p data-translate="missionRooted">Our mission is rooted in the timeless principles of Islam:</p>
+          
+          <ul class="about-features" style="list-style: none; margin-top: 25px;">
+            <li><i class="fas fa-star"></i> <strong data-translate="faith">Faith (Iman)</strong> - <span data-translate="faithDesc">Strengthening belief in Allah and His Messenger</span></li>
+            <li><i class="fas fa-star"></i> <strong data-translate="worship">Worship (Ibadah)</strong> - <span data-translate="worshipDesc">Providing a sacred space for prayer and devotion</span></li>
+            <li><i class="fas fa-star"></i> <strong data-translate="knowledge">Knowledge (Ilm)</strong> - <span data-translate="knowledgeDesc">Promoting Islamic education and understanding</span></li>
+            <li><i class="fas fa-star"></i> <strong data-translate="service">Service (Khidmah)</strong> - <span data-translate="serviceDesc">Serving humanity with compassion and excellence</span></li>
+            <li><i class="fas fa-star"></i> <strong data-translate="unity">Unity (Ummah)</strong> - <span data-translate="unityDesc">Building bridges within and beyond our community</span></li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <div style="width: 100%; height: 450px; background: linear-gradient(135deg, var(--deep-blue) 0%, var(--midnight) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: var(--primary-gold); padding: 40px;">
+            <div style="font-size: 6rem; margin-bottom: 20px;">☪️</div>
+            <div style="font-size: 2rem; font-family: 'Playfair Display', serif; text-align: center;" data-translate="quoteText">"The best of people are those who are most beneficial to people."</div>
+            <div style="margin-top: 15px; font-size: 1rem; opacity: 0.8;" data-translate="quoteProphet">— Prophet Muhammad ﷺ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="history-section" style="background-color: var(--cream); background-image: url('assets/images/pattern/pattern1.png'); background-repeat: repeat; background-size: auto; background-position: center; background-blend-mode: overlay;">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-translate="ourHistory">Our History</h2>
+        <p data-translate="ourHistoryDesc">A journey of faith, growth, and community service</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="year" data-translate="historyBeginning">The Beginning</div>
+            <h3 data-translate="historyFoundation">Foundation</h3>
+            <p data-translate="historyFoundationText">Our center was founded by a small group of dedicated Muslims who recognized the need for a place of worship and community gathering in the area.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="year" data-translate="historyGrowth">Growth Years</div>
+            <h3 data-translate="historyCommunityExpansion">Community Expansion</h3>
+            <p data-translate="historyCommunityExpansionText">As the Muslim population grew, so did our center. We expanded our facilities to include classrooms, a community hall, and improved prayer spaces.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="year" data-translate="historyEducation">Educational Programs</div>
+            <h3 data-translate="historyWeekendSchool">Weekend School Launch</h3>
+            <p data-translate="historyWeekendSchoolText">We established our weekend Islamic school program, providing Quran education and Islamic studies to children and adults alike.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="year" data-translate="historyCommunityService">Community Service</div>
+            <h3 data-translate="historyOutreach">Outreach Initiatives</h3>
+            <p data-translate="historyOutreachText">We launched various community service programs including food drives, interfaith dialogues, and youth mentorship programs.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="year" data-translate="historyToday">Today</div>
+            <h3 data-translate="historyContinuing">Continuing the Legacy</h3>
+            <p data-translate="historyContinuingText">Today, we continue to serve our community with multiple daily programs, a thriving youth center, and ongoing educational initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="services-section" style="background-color: var(--white); background-image: url('assets/images/pattern/pattern1.png'); background-repeat: repeat; background-size: auto; background-position: center; background-blend-mode: overlay;">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-translate="ourValues">Our Core Values</h2>
+        <p data-translate="ourValuesDesc">The principles that guide everything we do</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-book-quran"></i>
+          </div>
+          <h3 data-translate="authenticScholarship">Authentic Scholarship</h3>
+          <p data-translate="authenticScholarshipDesc">We are committed to authentic Islamic scholarship based on the Quran and Sunnah, guided by qualified scholars and teachers.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 data-translate="inclusiveCommunity">Inclusive Community</h3>
+          <p data-translate="inclusiveCommunityDesc">We welcome Muslims of all backgrounds and strive to create an inclusive environment where everyone feels at home.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 data-translate="interfaithDialogue">Interfaith Dialogue</h3>
+          <p data-translate="interfaithDialogueDesc">We believe in building bridges with people of other faiths through respectful dialogue and collaborative community service.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 data-translate="youthDevelopment">Youth Development</h3>
+          <p data-translate="youthDevelopmentDesc">Investing in our youth is investing in our future. We provide robust programs for young Muslims to grow in faith and character.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3 data-translate="socialResponsibility">Social Responsibility</h3>
+          <p data-translate="socialResponsibilityDesc">Following the Prophet's example, we actively engage in serving the broader community through charitable works and outreach.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="icon" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 data-translate="transparency">Transparency</h3>
+          <p data-translate="transparencyDesc">We maintain the highest standards of transparency and accountability in all our operations and financial matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Section -->
+  <section class="scholars-section" style="background-color: var(--cream); background-image: url('assets/images/pattern/pattern1.png'); background-repeat: repeat; background-size: auto; background-position: center; background-blend-mode: overlay;">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-translate="ourLeadership">Our Leadership</h2>
+        <p data-translate="ourLeadershipDesc">Dedicated individuals serving our community</p>
+      </div>
+      
+      <div class="scholars-grid">
+        <div class="scholar-card">
+          <div class="scholar-image">👳</div>
+          <div class="scholar-content">
+            <h3>Sheikh Ahmad Abdullah</h3>
+            <p>Head Imam & Director</p>
+          </div>
+        </div>
+        
+        <div class="scholar-card">
+          <div class="scholar-image">👔</div>
+          <div class="scholar-content">
+            <h3>Dr. Yusuf Rahman</h3>
+            <p>Board Chairman</p>
+          </div>
+        </div>
+        
+        <div class="scholar-card">
+          <div class="scholar-image">👳</div>
+          <div class="scholar-content">
+            <h3>Sheikh Mohammad Yusuf</h3>
+            <p>Resident Scholar</p>
+          </div>
+        </div>
+        
+        <div class="scholar-card">
+          <div class="scholar-image">👔</div>
+          <div class="scholar-content">
+            <h3>Br. Omar Siddiqui</h3>
+            <p>Executive Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="donate-cta">
+    <div class="container">
+      <h2 data-translate="joinCommunity">Join Our Community</h2>
+      <p data-translate="joinCommunityDesc">Whether you're new to the area or looking for a spiritual home, we welcome you with open arms.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> <span data-translate="getInTouch">Get In Touch</span>
+        </a>
+        <a href="index.html" class="btn btn-secondary">
+          <i class="fas fa-clock"></i> <span data-translate="viewPrayerTimes">View Prayer Times</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary-gold); font-size: 1.8rem;">Islamisk Center Vest Albertslund</h3>
+          <p data-translate="footerAbout">A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+            <li><a href="home.html" data-translate="home">Home</a></li>
+            <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-translate="services">Services</a></li>
+            <li><a href="contact.html" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="servicesFooter">Services</h4>
+          <ul>
+            <li><a href="services.html" data-translate="dailyPrayers">Daily Prayers</a></li>
+            <li><a href="services.html" data-translate="jumuahPrayer">Jummah Prayer</a></li>
+            <li><a href="services.html" data-translate="islamicEducation">Islamic Education</a></li>
+            <li><a href="services.html" data-translate="funeralServices">Funeral Services</a></li>
+            <li><a href="services.html" data-translate="marriageServices">Marriage Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="contactFooter">Contact</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-translate="locationText">Albertslund, Denmark</span></li>
+            <li><i class="fas fa-phone"></i> <span data-translate="phoneText">+45 XX XX XX XX</span></li>
+            <li><i class="fas fa-envelope"></i> <span data-translate="emailText">info@icvalbertslund.dk</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Islamisk Center Vest Albertslund. <span data-translate="copyright">All Rights Reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

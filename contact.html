@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Islamic Center - Location, Phone, Email, and Contact Form">
+  <meta name="keywords" content="Islamic Center, Contact, Location, Directions, Phone, Email">
+  <title>Contact Us | Islamisk Center Vest Albertslund</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🕌%3C/text%3E%3C/svg%3E">
+  
+  <style>
+    .map-section {
+      height: 400px;
+      background: linear-gradient(135deg, var(--deep-blue) 0%, var(--midnight) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-gold);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 40px;
+    }
+    
+    .map-section a {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--white);
+      padding: 12px 30px;
+      border: 2px solid var(--primary-gold);
+      border-radius: 30px;
+      transition: var(--transition);
+    }
+    
+    .map-section a:hover {
+      background: var(--primary-gold);
+      color: var(--midnight);
+    }
+    
+    .office-hours {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .office-hours h4 {
+      color: var(--primary-green);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .hours-list {
+      list-style: none;
+    }
+    
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 1.05rem;
+    }
+    
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .hours-list li span:first-child {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+    
+    .hours-list li span:last-child {
+      color: var(--text-light);
+    }
+    
+    .faq-section {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+    
+    .faq-item {
+      background: var(--white);
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 25px 30px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+    
+    .faq-question:hover {
+      color: var(--primary-green);
+    }
+    
+    .faq-question i {
+      color: var(--primary-gold);
+      transition: var(--transition);
+    }
+    
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding: 0 30px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      padding: 0 30px 25px;
+      max-height: 300px;
+    }
+    
+    .faq-answer p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">
+        <img src="assets/images/logonew.png" alt="Islamisk Center Vest Logo" style="height: 50px; width: auto; margin-right: 15px;">
+        <span class="nav-logo-text">
+          <span class="mosque-name">Islamisk Center Vest</span>
+          <span class="tagline">Albertslund</span>
+        </span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+        <li><a href="home.html" data-translate="home">Home</a></li>
+        <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+        <li><a href="services.html" data-translate="services">Services</a></li>
+        <li><a href="contact.html" class="active" data-translate="contact">Contact</a></li>
+        <li><a href="home.html#donate" class="nav-donate" data-translate="donate">Donate</a></li>
+      </ul>
+      
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+        EN
+      </button>
+      
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background-image: linear-gradient(rgba(13, 19, 33, 0.85), rgba(26, 39, 68, 0.85)), url('assets/images/HeroImage.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+    <h1 data-translate="contactTitle">Contact Us</h1>
+    <p data-translate="contactSubtitle">We'd love to hear from you</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" style="background-color: var(--white); background-image: url('assets/images/pattern/pattern1.png'); background-repeat: repeat; background-size: auto; background-position: center; background-blend-mode: overlay;">
+    <div class="container">
+      <style>
+    .contact-grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-grid-2x2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <div style="max-width: 900px; margin: 0 auto;">
+        <h3 style="text-align: center; font-size: 2rem; color: var(--primary-green); margin-bottom: 50px;" data-translate="getInTouchTitle">Get In Touch</h3>
+        
+        <div class="contact-grid-2x2">
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="content">
+              <h4 data-translate="location">Location</h4>
+              <p>Islamisk Center Vest<br><span data-translate="locationText">Albertslund, Denmark</span></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="content">
+              <h4 data-translate="phone">Phone</h4>
+              <p><span data-translate="phoneText">+45 XX XX XX XX</span></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="content">
+              <h4 data-translate="email">Email</h4>
+              <p><span data-translate="emailText">info@icvalbertslund.dk</span></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="content">
+              <h4>WhatsApp</h4>
+              <p>+45 XX XX XX XX</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          
+          <!-- Office Hours -->
+          <div class="office-hours" style="max-width: 600px; margin: 0 auto;">
+            <h4><i class="fas fa-clock"></i> <span data-translate="officeHours">Office Hours</span></h4>
+            <ul class="hours-list">
+              <li>
+                <span data-translate="monday">Monday</span>
+                <span>9:00 AM - 5:00 PM</span>
+              </li>
+              <li>
+                <span data-translate="friday">Friday</span>
+                <span>9:00 AM - 3:00 PM</span>
+              </li>
+              <li>
+                <span data-translate="saturday">Saturday</span>
+                <span>10:00 AM - 2:00 PM</span>
+              </li>
+              <li>
+                <span data-translate="sunday">Sunday</span>
+                <span data-translate="closed">Closed</span>
+              </li>
+            </ul>
+            <p style="margin-top: 15px; color: var(--text-light); font-size: 0.95rem;">
+              <i class="fas fa-info-circle" style="color: var(--primary-gold);"></i>
+              The masjid is open for all five daily prayers.
+            </p>
+          </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div>
+      <i class="fas fa-map-marked-alt" style="font-size: 4rem; display: block; margin-bottom: 20px;"></i>
+      <p style="color: var(--white); max-width: 500px; margin: 0 auto;">
+        We are located in the heart of the city, easily accessible by public transportation and with ample parking available.
+      </p>
+      <a href="https://maps.google.com" target="_blank" rel="noopener">
+        <i class="fas fa-directions"></i> Get Directions
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about visiting our center</p>
+      </div>
+      
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item">
+          <div class="faq-question">
+            Is the masjid open to visitors of other faiths?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! We warmly welcome visitors of all faiths who wish to learn about Islam or simply experience our community. We offer guided tours upon request and regularly host interfaith events.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            What should I wear when visiting the masjid?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We recommend modest clothing for all visitors. This generally means covering shoulders and knees. Women are welcome to bring a headscarf or we can provide one. Shoes are removed before entering the prayer hall.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Is parking available at the center?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we have a parking lot available for visitors. During Friday prayers and special events, parking can fill up quickly, so we recommend arriving early or using nearby street parking.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I schedule a meeting with the Imam?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>You can schedule an appointment with our Imam by calling the office during business hours or by filling out the contact form above. Please indicate the purpose of your meeting so we can best prepare to assist you.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you have programs for children?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We have a vibrant weekend Islamic school for children ages 4-15, Quran memorization programs, youth groups for teenagers, and various activities throughout the year. Visit our Services page for more details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary-gold); font-size: 1.8rem;">Islamisk Center Vest Albertslund</h3>
+          <p data-translate="footerAbout">A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
+            <li><a href="home.html" data-translate="home">Home</a></li>
+            <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+            <li><a href="services.html" data-translate="services">Services</a></li>
+            <li><a href="contact.html" data-translate="contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="servicesFooter">Services</h4>
+          <ul>
+            <li><a href="services.html" data-translate="dailyPrayers">Daily Prayers</a></li>
+            <li><a href="services.html" data-translate="jumuahPrayer">Jummah Prayer</a></li>
+            <li><a href="services.html" data-translate="islamicEducation">Islamic Education</a></li>
+            <li><a href="services.html" data-translate="funeralServices">Funeral Services</a></li>
+            <li><a href="services.html" data-translate="marriageServices">Marriage Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-translate="contactFooter">Contact</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-translate="locationText">Albertslund, Denmark</span></li>
+            <li><i class="fas fa-phone"></i> <span data-translate="phoneText">+45 XX XX XX XX</span></li>
+            <li><i class="fas fa-envelope"></i> <span data-translate="emailText">info@icvalbertslund.dk</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Islamisk Center Vest Albertslund. <span data-translate="copyright">All Rights Reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

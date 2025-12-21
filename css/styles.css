@@ -869,8 +869,9 @@ img {
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    width: 193px;
-    height: 103px;
+    width: 95%;
+    max-width: 600px;
+    height: 200px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
@@ -886,9 +887,10 @@ img {
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    transform: scale(0.52);
-    transform-origin: top left;
+    left: 50%;
+    margin-left: -210px;
+    transform: scale(1.0);
+    transform-origin: top center;
   }
 }
 
@@ -899,26 +901,30 @@ img {
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    width: 178px;
-    height: 96px;
+    width: 95%;
+    max-width: 500px;
+    height: 180px;
     border-radius: 10px;
   }
   
   .prayer-widget-mobile iframe {
     top: 0;
-    transform: scale(0.48);
+    margin-left: -210px;
+    transform: scale(0.84);
   }
 }
 
 @media (max-width: 375px) {
   .prayer-widget-mobile .prayer-widget-container {
-    width: 159px;
-    height: 88px;
+    width: 95%;
+    max-width: 400px;
+    height: 165px;
   }
   
   .prayer-widget-mobile iframe {
     top: 0;
-    transform: scale(0.43);
+    margin-left: -210px;
+    transform: scale(0.67);
   }
 }
 

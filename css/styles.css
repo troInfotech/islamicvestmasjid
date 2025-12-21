@@ -819,6 +819,109 @@ img {
   margin-left: 10px;
 }
 
+/* ===== Prayer Times Widget (Desktop & Mobile) ===== */
+
+/* Desktop Widget */
+.prayer-widget-desktop {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.prayer-widget-desktop .prayer-widget-container {
+  width: 460px;
+  max-width: 100%;
+  height: 275px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.prayer-widget-desktop iframe {
+  width: 750px;
+  height: 600px;
+  border: none;
+  display: block;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* Mobile Widget - Hidden on desktop */
+.prayer-widget-mobile {
+  display: none !important;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .prayer-widget-desktop {
+    display: none !important;
+  }
+  
+  .prayer-widget-mobile {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .prayer-widget-mobile .prayer-widget-container {
+    width: 193px;
+    height: 103px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    position: relative;
+    background: white;
+  }
+  
+  .prayer-widget-mobile iframe {
+    width: 750px;
+    height: 600px;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.52);
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-widget-mobile {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .prayer-widget-mobile .prayer-widget-container {
+    width: 178px;
+    height: 96px;
+    border-radius: 10px;
+  }
+  
+  .prayer-widget-mobile iframe {
+    top: 0;
+    transform: scale(0.48);
+  }
+}
+
+@media (max-width: 375px) {
+  .prayer-widget-mobile .prayer-widget-container {
+    width: 159px;
+    height: 88px;
+  }
+  
+  .prayer-widget-mobile iframe {
+    top: 0;
+    transform: scale(0.43);
+  }
+}
+
 /* ===== Quick Prayer Times Widget ===== */
 .prayer-widget {
   background: var(--white);
@@ -2276,111 +2379,7 @@ img {
   background: rgba(212, 168, 83, 0.2);
 }
 
-/* ===== Responsive iFrame (Prayer Times Widget) ===== */
-@media (max-width: 768px) {
-  /* Prayer Hero Section */
-  .hero-prayer {
-    padding: 100px 10px 40px !important;
-  }
-  
-  .prayer-hero-content {
-    padding: 0 5px !important;
-  }
-  
-  /* The widget container div */
-  .prayer-hero-content > div[style*="display: flex"]:first-of-type {
-    padding: 0 !important;
-    margin-bottom: 8px !important;
-    width: 100%;
-  }
-  
-  /* The inner wrapper with overflow */
-  .prayer-hero-content > div > div[style*="width: 460px"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 175px !important;
-    border-radius: 12px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3) !important;
-  }
-  
-  /* The iframe itself */
-  iframe[title="Prayer Times Widget"] {
-    transform: scale(0.615) !important;
-    transform-origin: top center !important;
-    width: 750px !important;
-    height: 600px !important;
-    margin-left: -144px !important;
-    margin-top: -12px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-prayer {
-    padding: 90px 5px 15px !important;
-  }
-  
-  .prayer-hero-content {
-    padding: 0 !important;
-  }
-  
-  /* The inner wrapper */
-  .prayer-hero-content > div > div[style*="width: 460px"] {
-    height: 168px !important;
-    border-radius: 10px !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3) !important;
-  }
-  
-  /* The iframe for smaller phones */
-  iframe[title="Prayer Times Widget"] {
-    transform: scale(0.49) !important;
-    transform-origin: top center !important;
-    width: 750px !important;
-    height: 600px !important;
-    margin-left: -191px !important;
-    margin-top: -20px !important;
-  }
-  
-  /* Remove all margins/padding that cause white space */
-  .prayer-hero-content > div[style*="display: flex"]:first-of-type {
-    margin-bottom: 8px !important;
-    padding: 0 !important;
-  }
-  
-  .prayer-hero-content > div[style*="display: flex"]:last-child {
-    margin-top: 8px !important;
-    margin-bottom: 0 !important;
-    padding: 0 5px !important;
-  }
-}
-
-/* Extra small devices (iPhone SE, Galaxy Fold, etc.) */
-@media (max-width: 375px) {
-  .hero-prayer {
-    padding: 85px 5px 12px !important;
-  }
-  
-  .prayer-hero-content > div > div[style*="width: 460px"] {
-    height: 155px !important;
-  }
-  
-  iframe[title="Prayer Times Widget"] {
-    transform: scale(0.44) !important;
-    margin-left: -210px !important;
-    margin-top: -22px !important;
-  }
-  
-  .prayer-hero-content > div[style*="display: flex"]:first-of-type {
-    margin-bottom: 6px !important;
-  }
-  
-  .prayer-hero-content > div[style*="display: flex"]:last-child {
-    margin-top: 6px !important;
-  }
-}
+/* Old iframe responsive styles removed - now using .prayer-widget-desktop and .prayer-widget-mobile classes */
 
 /* ===== Contact/Info Card Responsiveness ===== */
 @media (max-width: 768px) {

@@ -2261,6 +2261,12 @@ img {
     font-size: 1.1rem;
   }
   
+  /* Services & About Pages - Plain White Background on Mobile */
+  .about-section {
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+  
   /* Services Page Mobile */
   .service-detail {
     padding: 50px 0 !important;
@@ -2647,6 +2653,12 @@ img {
   p, li, span {
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+  
+  /* Services & About Pages - Plain White Background on Small Mobile */
+  .about-section {
+    background: #ffffff !important;
+    background-image: none !important;
   }
   
   /* Services Page - Service Detail Sections */

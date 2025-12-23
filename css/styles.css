@@ -883,14 +883,14 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 95% !important;
     max-width: 600px !important;
-    height: 510px !important;
+    height: 380px !important;
     border-radius: 12px !important;
     background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
     position: absolute !important;
-    top: 0 !important;
+    top: -15px !important;
     left: 50% !important;
     width: 750px !important;
     height: 600px !important;
@@ -911,13 +911,13 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
     max-width: 460px !important;
-    height: 240px !important;
+    height: 210px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: -8px !important;
+    top: -12px !important;
     left: 50% !important;
     width: 750px !important;
     height: 600px !important;
@@ -934,13 +934,13 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
     max-width: 380px !important;
-    height: 200px !important;
+    height: 175px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: -5px !important;
+    top: -8px !important;
     left: 50% !important;
     width: 750px !important;
     height: 600px !important;

@@ -121,7 +121,15 @@
   color: var(--primary-gold);
 }
 
+[data-theme="dark"] #ishaIqamah {
+  color: var(--primary-gold) !important;
+}
+
 [data-theme="dark"] .prayer-time-card.highlighted .iqamah-time {
+  color: white !important;
+}
+
+[data-theme="dark"] .prayer-time-card.highlighted #ishaIqamah {
   color: white !important;
 }
 
@@ -1258,7 +1266,6 @@ img {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  color: var(--primary-green) !important;
   font-size: 1.4rem !important;
   font-weight: 600 !important;
   margin-top: 8px !important;

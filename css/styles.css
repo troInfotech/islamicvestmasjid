@@ -2214,6 +2214,7 @@ img {
   
   .hero-content h1 {
     font-size: 2.2rem;
+    white-space: normal;
   }
   
   .hero-content p {
@@ -2446,6 +2447,7 @@ img {
   
   .hero-content h1 {
     font-size: 1.8rem !important;
+    white-space: normal !important;
   }
   
   .hero-content p {
@@ -2517,6 +2519,7 @@ img {
   
   .hero-content h1 {
     font-size: 1.8rem;
+    white-space: normal;
   }
   
   .hero-content p {

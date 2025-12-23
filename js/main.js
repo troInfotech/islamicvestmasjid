@@ -52,7 +52,8 @@ function translatePage(lang) {
       if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
         element.placeholder = translations[lang][key];
       } else {
-        element.textContent = translations[lang][key];
+        // Use innerHTML to support HTML tags like <br>
+        element.innerHTML = translations[lang][key];
       }
     }
   });

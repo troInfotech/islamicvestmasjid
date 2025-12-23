@@ -14,7 +14,7 @@ const translations = {
     prayerTimesSubtitle: "Join us for congregational prayers",
     
     // Home Page
-    welcomeTitle: "Welcome to Islamisk Center Vest",
+    welcomeTitle: "Welcome to<br>Islamisk Center Vest",
     welcomeSubtitle: "A place of worship, learning, and community",
     welcomeText: "Experience the warmth of our Muslim community in Albertslund. Join us for daily prayers, Islamic education, and community events that strengthen our faith and bonds.",
     exploreServices: "Explore Our Services",
@@ -482,7 +482,7 @@ const translations = {
     prayerTimesSubtitle: "Tilslut dig os til fælles bønner",
     
     // Home Page
-    welcomeTitle: "Velkommen til Islamisk Center Vest",
+    welcomeTitle: "Velkommen til<br>Islamisk Center Vest",
     welcomeSubtitle: "Et sted for tilbedelse, læring og fællesskab",
     welcomeText: "Oplev varmen i vores muslimske samfund i Albertslund. Deltag i daglige bønner, islamisk uddannelse og samfundsarrangementer, der styrker vores tro og bånd.",
     exploreServices: "Udforsk Vores Tjenester",

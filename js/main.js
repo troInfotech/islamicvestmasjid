@@ -97,25 +97,56 @@ function updateThemeIcon(theme) {
 
 // ===== Mobile Navigation Toggle =====
 document.addEventListener('DOMContentLoaded', function() {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  // New Mobile Menu Toggle
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+  const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
 
-  if (navToggle && navMenu) {
+  function openMobileMenu() {
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.add('active');
+    if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('active');
+    if (navToggle) navToggle.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
+    if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('active');
+    if (navToggle) navToggle.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (navToggle) {
     navToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-      
-      // Animate hamburger to X
-      const spans = navToggle.querySelectorAll('span');
-      spans.forEach(span => span.classList.toggle('active'));
-    });
-
-    // Close menu when clicking a link
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
+      if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
   }
+
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+  }
+
+  if (mobileMenuBackdrop) {
+    mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close menu when clicking on a link
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close menu on ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+      closeMobileMenu();
+    }
+  });
 
   // ===== Initialize Dark Mode =====
   initThemeToggle();

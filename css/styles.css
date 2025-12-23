@@ -835,30 +835,31 @@ img {
 .prayer-widget-mobile .prayer-widget-container {
   position: relative;
   width: 100%;
-  max-width: 600px;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  background: var(--white);
+  background: #ffffff; /* White background for widget */
   transition: var(--transition);
 }
 
-/* Responsive iframe container using aspect ratio method */
+/* Desktop Widget - Fixed dimensions for My-Masjid widget */
 .prayer-widget-desktop .prayer-widget-container {
-  aspect-ratio: 16 / 10; /* Adjust based on your widget's ideal ratio */
-  max-width: 550px;
+  width: 460px;
+  max-width: 95%;
+  height: 280px;
   margin-bottom: 30px;
 }
 
-.prayer-widget-desktop iframe,
-.prayer-widget-mobile iframe {
+.prayer-widget-desktop iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 750px;
+  height: 600px;
   border: none;
   display: block;
+  transform-origin: top left;
+  transform: scale(0.61);
 }
 
 /* Hide mobile version on desktop */
@@ -875,14 +876,27 @@ img {
   
   .prayer-widget-mobile {
     display: flex !important;
-    padding: 0 15px;
+    padding: 0 10px;
     margin-bottom: 20px;
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    aspect-ratio: 16 / 11;
+    width: 95%;
     max-width: 600px;
+    height: 420px;
     border-radius: 12px;
+  }
+  
+  .prayer-widget-mobile iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 750px;
+    height: 600px;
+    border: none;
+    display: block;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
   }
 }
 
@@ -894,21 +908,35 @@ img {
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    aspect-ratio: 1 / 1; /* More square on small screens */
-    max-width: 400px;
+    width: 95%;
+    max-width: 440px;
+    height: 350px;
     border-radius: 10px;
+  }
+  
+  .prayer-widget-mobile iframe {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.62);
   }
 }
 
-/* Mobile Extra Small Screens */
+/* Mobile Extra Small Screens (iPhone SE, etc) */
 @media (max-width: 375px) {
   .prayer-widget-mobile {
-    padding: 0 5px;
+    padding: 0 8px;
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    aspect-ratio: 9 / 10;
+    width: 95%;
     max-width: 360px;
+    height: 310px;
+  }
+  
+  .prayer-widget-mobile iframe {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.51);
   }
 }
 

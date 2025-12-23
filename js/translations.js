@@ -260,6 +260,29 @@ const translations = {
     
     officeHours: "Office Hours",
     
+    // Map Section
+    locationDescription: "We are located in the heart of the city, easily accessible by public transportation and with ample parking available.",
+    getDirections: "Get Directions",
+    
+    // FAQ Section
+    faqTitle: "Frequently Asked Questions",
+    faqSubtitle: "Common questions about visiting our center",
+    
+    faqQuestion1: "Is the masjid open to visitors of other faiths?",
+    faqAnswer1: "Absolutely! We warmly welcome visitors of all faiths who wish to learn about Islam or simply experience our community. We offer guided tours upon request and regularly host interfaith events.",
+    
+    faqQuestion2: "What should I wear when visiting the masjid?",
+    faqAnswer2: "We recommend modest clothing for all visitors. This generally means covering shoulders and knees. Women are welcome to bring a headscarf or we can provide one. Shoes are removed before entering the prayer hall.",
+    
+    faqQuestion3: "Is parking available at the center?",
+    faqAnswer3: "Yes, we have a parking lot available for visitors. During Friday prayers and special events, parking can fill up quickly, so we recommend arriving early or using nearby street parking.",
+    
+    faqQuestion4: "How can I schedule a meeting with the Imam?",
+    faqAnswer4: "You can schedule an appointment with our Imam by calling the office during business hours or by filling out the contact form above. Please indicate the purpose of your meeting so we can best prepare to assist you.",
+    
+    faqQuestion5: "Do you have programs for children?",
+    faqAnswer5: "Yes! We have a vibrant weekend Islamic school for children ages 4-15, Quran memorization programs, youth groups for teenagers, and various activities throughout the year. Visit our Services page for more details.",
+    
     // Days of the week
     monday: "Monday",
     tuesday: "Tuesday",
@@ -704,6 +727,29 @@ const translations = {
     followUs: "Følg Os",
     
     officeHours: "Åbningstider",
+    
+    // Map Section
+    locationDescription: "Vi er beliggende i hjertet af byen, let tilgængelig med offentlig transport og med rigelig parkering tilgængelig.",
+    getDirections: "Få Vejledning",
+    
+    // FAQ Section
+    faqTitle: "Ofte Stillede Spørgsmål",
+    faqSubtitle: "Almindelige spørgsmål om besøg i vores center",
+    
+    faqQuestion1: "Er moskeen åben for besøgende af andre trosretninger?",
+    faqAnswer1: "Absolut! Vi byder varmt velkommen til besøgende af alle trosretninger, der ønsker at lære om islam eller blot opleve vores samfund. Vi tilbyder guidede ture efter anmodning og er regelmæssigt værter for interreligiøse arrangementer.",
+    
+    faqQuestion2: "Hvad skal jeg have på, når jeg besøger moskeen?",
+    faqAnswer2: "Vi anbefaler beskeden påklædning for alle besøgende. Dette betyder generelt at dække skuldre og knæ. Kvinder er velkomne til at medbringe et tørklæde, eller vi kan stille et til rådighed. Sko tages af før indgang til bedesalen.",
+    
+    faqQuestion3: "Er der parkering tilgængelig ved centret?",
+    faqAnswer3: "Ja, vi har en parkeringsplads til rådighed for besøgende. Under fredagsbønner og særlige begivenheder kan parkeringen fyldes hurtigt, så vi anbefaler at ankomme tidligt eller bruge nærliggende gadeparkering.",
+    
+    faqQuestion4: "Hvordan kan jeg planlægge et møde med imamen?",
+    faqAnswer4: "Du kan booke en aftale med vores imam ved at ringe til kontoret i åbningstiden eller ved at udfylde kontaktformularen ovenfor. Angiv venligst formålet med dit møde, så vi bedst kan forberede os på at hjælpe dig.",
+    
+    faqQuestion5: "Har I programmer for børn?",
+    faqAnswer5: "Ja! Vi har en levende weekend islamisk skole for børn i alderen 4-15 år, Koran-memoriseringsprogrammer, ungdomsgrupper for teenagere og forskellige aktiviteter året rundt. Besøg vores Services-side for flere detaljer.",
     
     // Days of the week
     monday: "Mandag",

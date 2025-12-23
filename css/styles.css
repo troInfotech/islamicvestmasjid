@@ -911,7 +911,7 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
     max-width: 460px !important;
-    height: 372px !important;
+    height: 290px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }
@@ -933,8 +933,8 @@ img {
   
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
-    max-width: 375px !important;
-    height: 306px !important;
+    max-width: 380px !important;
+    height: 240px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }

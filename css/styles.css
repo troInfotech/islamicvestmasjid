@@ -539,10 +539,12 @@ img {
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 9999;
   overflow-y: auto;
+  pointer-events: none;
 }
 
 .mobile-menu-overlay.active {
   right: 0;
+  pointer-events: auto;
 }
 
 .mobile-menu-content {
@@ -702,12 +704,14 @@ img {
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: all 0.3s ease;
 }
 
 .mobile-menu-backdrop.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* Dark Mode Mobile Menu Styles */

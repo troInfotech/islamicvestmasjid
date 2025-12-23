@@ -876,75 +876,83 @@ img {
   
   .prayer-widget-mobile {
     display: flex !important;
-    padding: 0 10px;
-    margin-bottom: 20px;
+    padding: 0 10px !important;
+    margin-bottom: 20px !important;
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    width: 95%;
-    max-width: 600px;
-    height: 420px;
-    border-radius: 12px;
+    width: 95% !important;
+    max-width: 600px !important;
+    height: 510px !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 750px;
-    height: 600px;
-    border: none;
-    display: block;
-    transform-origin: top center;
-    transform: translateX(-50%) scale(0.85);
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    width: 750px !important;
+    height: 600px !important;
+    border: none !important;
+    display: block !important;
+    transform-origin: top center !important;
+    transform: translateX(-50%) scale(0.85) !important;
   }
 }
 
-/* Mobile Small Screens */
+/* Mobile Small Screens (iPhone 13, 14, etc) */
 @media (max-width: 480px) {
   .prayer-widget-mobile {
-    padding: 0 10px;
-    margin-bottom: 15px;
+    padding: 0 10px !important;
+    margin-bottom: 15px !important;
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    width: 95%;
-    max-width: 440px;
-    height: 350px;
-    border-radius: 10px;
+    width: 96% !important;
+    max-width: 460px !important;
+    height: 372px !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.62);
+    top: 0 !important;
+    left: 50% !important;
+    width: 750px !important;
+    height: 600px !important;
+    transform: translateX(-50%) scale(0.62) !important;
   }
 }
 
-/* Mobile Extra Small Screens (iPhone SE, etc) */
-@media (max-width: 375px) {
+/* Mobile Extra Small Screens (iPhone SE, 12 Mini, etc) */
+@media (max-width: 390px) {
   .prayer-widget-mobile {
-    padding: 0 8px;
+    padding: 0 8px !important;
   }
   
   .prayer-widget-mobile .prayer-widget-container {
-    width: 95%;
-    max-width: 360px;
-    height: 310px;
+    width: 96% !important;
+    max-width: 375px !important;
+    height: 306px !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.51);
+    top: 0 !important;
+    left: 50% !important;
+    width: 750px !important;
+    height: 600px !important;
+    transform: translateX(-50%) scale(0.51) !important;
   }
 }
 
 /* Dark mode support for iframe containers */
 [data-theme="dark"] .prayer-widget-desktop .prayer-widget-container,
 [data-theme="dark"] .prayer-widget-mobile .prayer-widget-container {
-  background: var(--white);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  background: #ffffff !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Loading state for better UX */

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Test - Mobile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .test-info {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .test-info h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #667eea;
+    }
+
+    .test-info p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .prayer-widget-mobile {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0 10px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .prayer-widget-container {
+      position: relative;
+      width: 96% !important;
+      max-width: 460px !important;
+      height: 372px !important;
+      overflow: hidden;
+      border-radius: 10px !important;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      background: #ffffff !important;
+    }
+
+    .prayer-widget-container iframe {
+      position: absolute !important;
+      top: 0 !important;
+      left: 50% !important;
+      width: 750px !important;
+      height: 600px !important;
+      border: none !important;
+      display: block !important;
+      transform: translateX(-50%) scale(0.62) !important;
+      transform-origin: top center !important;
+    }
+
+    /* For smaller screens */
+    @media (max-width: 390px) {
+      .prayer-widget-container {
+        width: 96% !important;
+        max-width: 375px !important;
+        height: 306px !important;
+      }
+      
+      .prayer-widget-container iframe {
+        transform: translateX(-50%) scale(0.51) !important;
+      }
+    }
+
+    .instructions {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .instructions h2 {
+      color: #667eea;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .instructions ol {
+      margin-left: 20px;
+    }
+
+    .instructions li {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+
+    .screen-size {
+      background: #667eea;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-info">
+    <h1>📱 Mobile Widget Test</h1>
+    <p>If you see purple around the widget, there's a problem.</p>
+    <p>It should have a clean white background!</p>
+  </div>
+
+  <div class="screen-size" id="screenSize">
+    Screen: <span id="width"></span>px × <span id="height"></span>px
+  </div>
+
+  <!-- Prayer Widget Test -->
+  <div class="prayer-widget-mobile">
+    <div class="prayer-widget-container">
+      <iframe 
+        src="https://time.my-masjid.com/widget/eb313f9e-dae0-4f1e-ab67-c7bf44456523" 
+        title="Prayer Times Widget Test"
+        loading="eager"
+        scrolling="no">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <h2>✅ What You Should See</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li>✅ Widget fills the white container completely</li>
+      <li>✅ No purple showing around widget</li>
+      <li>✅ All prayer times visible</li>
+      <li>✅ Clean borders</li>
+    </ul>
+    
+    <h2 style="margin-top: 20px;">🔄 If Still Broken</h2>
+    <ol>
+      <li><strong>Hard Refresh on iPhone:</strong>
+        <ul style="margin-top: 5px;">
+          <li>Hold the refresh button in Safari</li>
+          <li>Or close Safari completely and reopen</li>
+          <li>Or Settings → Safari → Clear History and Website Data</li>
+        </ul>
+      </li>
+      <li><strong>Check this test page loads correctly</strong></li>
+      <li><strong>If this works but main page doesn't:</strong> Caching issue on main site</li>
+    </ol>
+  </div>
+
+  <script>
+    // Display screen dimensions
+    function updateSize() {
+      document.getElementById('width').textContent = window.innerWidth;
+      document.getElementById('height').textContent = window.innerHeight;
+    }
+    updateSize();
+    window.addEventListener('resize', updateSize);
+  </script>
+</body>
+</html>
+

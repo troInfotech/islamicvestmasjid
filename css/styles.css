@@ -2067,27 +2067,27 @@ img {
   
   .nav-right {
     position: absolute;
-    right: 20px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
   
   .theme-toggle {
     margin-left: 0;
-    width: 40px;
-    height: 40px;
-    padding: 8px 10px;
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    font-size: 1rem;
   }
   
   .lang-toggle {
-    position: absolute;
-    right: 65px;
-    top: 50%;
-    transform: translateY(-50%);
     margin-left: 0;
-    min-width: 45px;
-    height: 40px;
-    padding: 6px 10px;
+    min-width: 42px;
+    height: 38px;
+    padding: 8px 10px;
     font-size: 0.85rem;
   }
   
@@ -2319,8 +2319,11 @@ img {
     width: 22px;
   }
   
+  .nav-right {
+    gap: 6px;
+  }
+  
   .theme-toggle {
-    right: 90px;
     width: 34px;
     height: 34px;
     font-size: 0.9rem;
@@ -2328,7 +2331,6 @@ img {
   }
   
   .lang-toggle {
-    right: 52px;
     min-width: 36px;
     height: 34px;
     font-size: 0.75rem;

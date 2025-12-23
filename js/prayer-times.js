@@ -4,11 +4,11 @@
 // Parse CSV data
 function parseCSV(csv) {
   const lines = csv.trim().split('\n');
-  const headers = lines[0].split(',');
+  const headers = lines[0].split(',').map(h => h.trim());
   const data = [];
   
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',');
+    const values = lines[i].split(',').map(v => v.trim());
     const entry = {};
     headers.forEach((header, index) => {
       entry[header] = values[index];
@@ -98,7 +98,21 @@ function updatePrayerTimes(prayerData) {
   Object.keys(updates).forEach(elementId => {
     const element = document.getElementById(elementId);
     if (element) {
-      element.textContent = updates[elementId];
+      const timeValue = updates[elementId];
+      
+      // Clean the value - only if it exists
+      let cleanValue;
+      if (timeValue && timeValue !== '' && timeValue !== undefined && timeValue !== null) {
+        cleanValue = timeValue.trim();
+        // Only remove truly non-printable characters, keep digits, colons, and spaces
+        if (!/^\d{1,2}:\d{2}$/.test(cleanValue)) {
+          cleanValue = cleanValue.replace(/[^\d:]/g, '');
+        }
+      } else {
+        cleanValue = '--:--';
+      }
+      
+      element.textContent = cleanValue;
     }
   });
   
@@ -144,6 +158,17 @@ function highlightCurrentPrayer(todayTimes) {
     const adhanElement = card.querySelector('.adhan-time');
     if (adhanElement && adhanElement.id.toLowerCase().includes(currentPrayer)) {
       card.classList.add('highlighted');
+      // Force iqamah time to show with white color when highlighted
+      const iqamahElement = card.querySelector('.iqamah-time');
+      if (iqamahElement) {
+        iqamahElement.style.color = 'white';
+        iqamahElement.style.display = 'block';
+        iqamahElement.style.visibility = 'visible';
+        iqamahElement.style.opacity = '1';
+        iqamahElement.style.fontSize = '1.4rem';
+        iqamahElement.style.fontWeight = '600';
+        iqamahElement.style.marginTop = '8px';
+      }
     }
   });
 }

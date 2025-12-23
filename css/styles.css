@@ -819,166 +819,178 @@ img {
   margin-left: 10px;
 }
 
-/* ===== Prayer Times Widget (Desktop & Mobile) - Responsive Iframe Solution ===== */
-
-/* Shared base styles for both desktop and mobile */
-.prayer-widget-desktop,
-.prayer-widget-mobile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0 10px;
-}
-
-.prayer-widget-desktop .prayer-widget-container,
-.prayer-widget-mobile .prayer-widget-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 15px;
+/* ===== Prayer Times Display ===== */
+.prayer-times-display {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  background: #ffffff; /* White background for widget */
-  transition: var(--transition);
 }
 
-/* Desktop Widget - Fixed dimensions for My-Masjid widget */
-.prayer-widget-desktop .prayer-widget-container {
-  width: 460px;
-  max-width: 95%;
-  height: 280px;
+.prayer-times-header {
+  text-align: center;
   margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--primary-gold);
 }
 
-.prayer-widget-desktop iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 750px;
-  height: 600px;
-  border: none;
-  display: block;
-  transform-origin: top left;
-  transform: scale(0.61);
+.masjid-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 15px;
 }
 
-/* Hide mobile version on desktop */
-.prayer-widget-mobile {
-  display: none !important;
+.current-time {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
 }
 
-/* Tablet and Mobile Responsive Styles */
+.current-date {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.prayer-times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.prayer-time-card {
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 20px 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.prayer-time-card.special {
+  background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+}
+
+.prayer-time-card.highlighted {
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);
+  color: white;
+}
+
+.prayer-time-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.prayer-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.prayer-time-card.highlighted .prayer-name,
+.prayer-time-card.highlighted .prayer-name-arabic,
+.prayer-time-card.highlighted .adhan-time,
+.prayer-time-card.highlighted .iqamah-time {
+  color: white;
+}
+
+.prayer-name-arabic {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.adhan-time {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.iqamah-time {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+.jumua-time {
+  font-size: 2rem;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-  /* Hide desktop, show mobile */
-  .prayer-widget-desktop {
-    display: none !important;
+  .prayer-times-display {
+    padding: 20px 15px;
   }
   
-  .prayer-widget-mobile {
-    display: flex !important;
-    padding: 0 10px !important;
-    margin-bottom: 20px !important;
+  .current-time {
+    font-size: 3rem;
   }
   
-  .prayer-widget-mobile .prayer-widget-container {
-    width: 95% !important;
-    max-width: 600px !important;
-    height: 380px !important;
-    border-radius: 12px !important;
-    background: #ffffff !important;
+  .masjid-name {
+    font-size: 1.4rem;
   }
   
-  .prayer-widget-mobile iframe {
-    position: absolute !important;
-    top: -15px !important;
-    left: 50% !important;
-    width: 750px !important;
-    height: 600px !important;
-    border: none !important;
-    display: block !important;
-    transform-origin: top center !important;
-    transform: translateX(-50%) scale(0.85) !important;
+  .prayer-times-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .adhan-time {
+    font-size: 1.5rem;
+  }
+  
+  .iqamah-time {
+    font-size: 1.2rem;
   }
 }
 
-/* Mobile Small Screens (iPhone 13, 14, etc) */
 @media (max-width: 480px) {
-  .prayer-widget-mobile {
-    padding: 0 10px !important;
-    margin-bottom: 15px !important;
+  .current-time {
+    font-size: 2.5rem;
   }
   
-  .prayer-widget-mobile .prayer-widget-container {
-    width: 96% !important;
-    max-width: 460px !important;
-    height: 210px !important;
-    border-radius: 10px !important;
-    background: #ffffff !important;
+  .prayer-time-card {
+    padding: 15px 10px;
   }
   
-  .prayer-widget-mobile iframe {
-    top: -12px !important;
-    left: 50% !important;
-    width: 750px !important;
-    height: 600px !important;
-    transform: translateX(-50%) scale(0.62) !important;
-  }
-}
-
-/* Mobile Extra Small Screens (iPhone SE, 12 Mini, etc) */
-@media (max-width: 390px) {
-  .prayer-widget-mobile {
-    padding: 0 8px !important;
+  .prayer-name {
+    font-size: 1rem;
   }
   
-  .prayer-widget-mobile .prayer-widget-container {
-    width: 96% !important;
-    max-width: 380px !important;
-    height: 175px !important;
-    border-radius: 10px !important;
-    background: #ffffff !important;
-  }
-  
-  .prayer-widget-mobile iframe {
-    top: -8px !important;
-    left: 50% !important;
-    width: 750px !important;
-    height: 600px !important;
-    transform: translateX(-50%) scale(0.51) !important;
+  .adhan-time {
+    font-size: 1.3rem;
   }
 }
 
-/* Dark mode support for iframe containers */
-[data-theme="dark"] .prayer-widget-desktop .prayer-widget-container,
-[data-theme="dark"] .prayer-widget-mobile .prayer-widget-container {
-  background: #ffffff !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+/* Dark mode support */
+[data-theme="dark"] .prayer-times-display {
+  background: rgba(42, 42, 42, 0.95);
 }
 
-/* Loading state for better UX */
-.prayer-widget-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--primary-gold);
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  z-index: -1;
+[data-theme="dark"] .masjid-name,
+[data-theme="dark"] .current-time {
+  color: var(--text-dark);
 }
 
-@keyframes spin {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+[data-theme="dark"] .prayer-time-card {
+  background: #3a3a3a;
 }
 
-/* Hover effect for better interactivity */
-.prayer-widget-container:hover {
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-  transform: translateY(-2px);
+[data-theme="dark"] .prayer-name {
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .adhan-time {
+  color: var(--text-dark);
 }
 
 /* ===== Quick Prayer Times Widget ===== */

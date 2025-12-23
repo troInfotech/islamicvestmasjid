@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20251223g">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🕌%3C/text%3E%3C/svg%3E">
@@ -66,33 +66,61 @@
         <p class="subtitle" style="font-size: 1.1rem;">"Indeed, prayer has been decreed upon the believers at specified times." - Quran 4:103</p>
       </div>
       
-      <!-- My-Masjid Prayer Times Widget - Desktop -->
-      <div class="prayer-widget-desktop">
-        <div class="prayer-widget-container">
-          <iframe 
-            src="https://time.my-masjid.com/widget/eb313f9e-dae0-4f1e-ab67-c7bf44456523" 
-            title="Prayer Times Widget - Islamisk Center Vest Albertslund"
-            loading="lazy"
-            scrolling="no"
-            allow="geolocation"
-            aria-label="Daily prayer times display">
-            <p>Your browser does not support iframes. Please visit our <a href="services.html">services page</a> for prayer times.</p>
-          </iframe>
+      <!-- Prayer Times Display -->
+      <div class="prayer-times-display">
+        <div class="prayer-times-header">
+          <h2 class="masjid-name">Islamisk Center Vest</h2>
+          <div class="current-time" id="currentTime">00:00:00</div>
+          <div class="current-date" id="currentDate">Loading...</div>
         </div>
-      </div>
-      
-      <!-- My-Masjid Prayer Times Widget - Mobile -->
-      <div class="prayer-widget-mobile">
-        <div class="prayer-widget-container">
-          <iframe 
-            src="https://time.my-masjid.com/widget/eb313f9e-dae0-4f1e-ab67-c7bf44456523" 
-            title="Prayer Times Widget - Islamisk Center Vest Albertslund"
-            loading="lazy"
-            scrolling="no"
-            allow="geolocation"
-            aria-label="Daily prayer times display">
-            <p>Your browser does not support iframes. Please visit our <a href="services.html">services page</a> for prayer times.</p>
-          </iframe>
+        
+        <div class="prayer-times-grid">
+          <div class="prayer-time-card special">
+            <div class="prayer-name">Shuruq</div>
+            <div class="prayer-name-arabic">شروق</div>
+            <div class="adhan-time" id="shuruqTime">--:--</div>
+          </div>
+          
+          <div class="prayer-time-card special">
+            <div class="prayer-name">Jumu'ah</div>
+            <div class="prayer-name-arabic">جمعة</div>
+            <div class="adhan-time jumua-time">13:00</div>
+          </div>
+          
+          <div class="prayer-time-card">
+            <div class="prayer-name">Fajr</div>
+            <div class="prayer-name-arabic">فجر</div>
+            <div class="adhan-time" id="fajrAdhan">--:--</div>
+            <div class="iqamah-time" id="fajrIqamah">--:--</div>
+          </div>
+          
+          <div class="prayer-time-card highlighted">
+            <div class="prayer-name">Dhuhr</div>
+            <div class="prayer-name-arabic">ظهر</div>
+            <div class="adhan-time" id="dhuhrAdhan">--:--</div>
+            <div class="iqamah-time" id="dhuhrIqamah">--:--</div>
+          </div>
+          
+          <div class="prayer-time-card">
+            <div class="prayer-name">Asr</div>
+            <div class="prayer-name-arabic">عصر</div>
+            <div class="adhan-time" id="asrAdhan">--:--</div>
+            <div class="iqamah-time" id="asrIqamah">--:--</div>
+          </div>
+          
+          <div class="prayer-time-card">
+            <div class="prayer-name">Maghrib</div>
+            <div class="prayer-name-arabic">مغرب</div>
+            <div class="adhan-time" id="maghribAdhan">--:--</div>
+            <div class="iqamah-time" id="maghribIqamah">--:--</div>
+          </div>
+          
+          <div class="prayer-time-card">
+            <div class="prayer-name">Isha</div>
+            <div class="prayer-name-arabic">عشاء</div>
+            <div class="adhan-time" id="ishaAdhan">--:--</div>
+            <div class="iqamah-time" id="ishaIqamah">--:--</div>
+          </div>
         </div>
       </div>
       
@@ -168,5 +196,6 @@
   <!-- Scripts -->
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/prayer-times.js"></script>
 </body>
 </html>

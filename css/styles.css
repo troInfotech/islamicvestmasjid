@@ -911,13 +911,13 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
     max-width: 460px !important;
-    height: 290px !important;
+    height: 240px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: 0 !important;
+    top: -8px !important;
     left: 50% !important;
     width: 750px !important;
     height: 600px !important;
@@ -934,13 +934,13 @@ img {
   .prayer-widget-mobile .prayer-widget-container {
     width: 96% !important;
     max-width: 380px !important;
-    height: 240px !important;
+    height: 200px !important;
     border-radius: 10px !important;
     background: #ffffff !important;
   }
   
   .prayer-widget-mobile iframe {
-    top: 0 !important;
+    top: -5px !important;
     left: 50% !important;
     width: 750px !important;
     height: 600px !important;

@@ -133,17 +133,15 @@
   color: white !important;
 }
 
-/* Mobile labels styling for dark mode */
-@media (max-width: 768px) {
-  [data-theme="dark"] .adhan-time::before,
-  [data-theme="dark"] .iqamah-time::before {
-    color: var(--primary-gold);
-  }
-  
-  [data-theme="dark"] .prayer-time-card.highlighted .adhan-time::before,
-  [data-theme="dark"] .prayer-time-card.highlighted .iqamah-time::before {
-    color: rgba(255, 255, 255, 0.7);
-  }
+/* Labels styling for dark mode - Desktop and Mobile */
+[data-theme="dark"] .adhan-time::before,
+[data-theme="dark"] .iqamah-time::before {
+  color: var(--primary-gold);
+}
+
+[data-theme="dark"] .prayer-time-card.highlighted .adhan-time::before,
+[data-theme="dark"] .prayer-time-card.highlighted .iqamah-time::before {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="dark"] .map-section p {
@@ -1254,16 +1252,25 @@ img {
 }
 
 .adhan-time {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 8px;
   line-height: 1.2;
 }
 
+.adhan-time::before {
+  content: 'Adhan: ';
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 4px;
+}
+
 .iqamah-time {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--primary-green);
   display: block !important;
   visibility: visible !important;
@@ -1273,6 +1280,16 @@ img {
   height: auto !important;
   max-height: none !important;
   overflow: visible !important;
+}
+
+.iqamah-time::before {
+  content: 'Jamaat: ';
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 8px;
 }
 
 #ishaIqamah {
@@ -1351,7 +1368,7 @@ img {
   }
   
   .adhan-time {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 6px;
   }
   
@@ -1365,13 +1382,13 @@ img {
   }
   
   .iqamah-time {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: block !important;
     opacity: 1 !important;
   }
   
   .iqamah-time::before {
-    content: 'Iqamah: ';
+    content: 'Jamaat: ';
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-light);
@@ -1425,7 +1442,7 @@ img {
   }
   
   .adhan-time {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 6px;
   }
   
@@ -1439,14 +1456,14 @@ img {
   }
   
   .iqamah-time {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
   }
   
   .iqamah-time::before {
-    content: 'Iqamah: ';
+    content: 'Jamaat: ';
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--text-light);

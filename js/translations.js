@@ -62,7 +62,7 @@ const translations = {
     
     ourMission: "Our Mission",
     missionText: "Islamisk Center Vest Albertslund is dedicated to serving the Muslim community and fostering interfaith understanding. We strive to provide a welcoming environment for worship, education, and community building.",
-    missionRooted: "Our mission is rooted in the timeless principles of Islam:",
+    missionRooted: "Our mission reflects our commitment to social responsibility and human welfare:",
     
     faith: "Faith (Iman)",
     faithDesc: "Strengthening belief in Allah and His Messenger",
@@ -95,8 +95,8 @@ const translations = {
     historyCommunityExpansionText: "As the Muslim population grew, so did our center. We expanded our facilities to include classrooms, a community hall, and improved prayer spaces.",
     
     historyEducation: "Educational Programs",
-    historyWeekendSchool: "Weekend School Launch",
-    historyWeekendSchoolText: "We established our weekend Islamic school program, providing Quran education and Islamic studies to children and adults alike.",
+    historyWeekendSchool: "Weekend Education Launch",
+    historyWeekendSchoolText: "We established our weekend Islamic education program, providing Quran education and Islamic studies to children and adults alike.",
     
     historyCommunityService: "Community Service",
     historyOutreach: "Outreach Initiatives",
@@ -155,21 +155,25 @@ const translations = {
     jumuahServiceTitle: "Jumu'ah (Friday) Prayer",
     jumuahServiceText1: "The Friday congregational prayer is the highlight of our week. Join hundreds of community members for the weekly sermon and prayer.",
     jumuahServiceText2: "We offer multiple Jumu'ah services to accommodate our growing community.",
-    jumuahFeature1: "First Jumu'ah:",
-    jumuahFeature1Text: "Khutbah at 1:00 PM, Prayer at 1:30 PM",
-    jumuahFeature2: "Second Jumu'ah:",
-    jumuahFeature2Text: "Khutbah at 2:00 PM, Prayer at 2:30 PM",
+    jumuahFeature1: "Jumu'ah:",
+    jumuahFeature1Text: "",
+    jumuahFeature2: "",
+    jumuahFeature2Text: "",
     jumuahFeature3: "Inspiring khutbahs by our resident scholars",
     jumuahFeature4: "Topics relevant to contemporary Muslim life",
     jumuahFeature5: "Overflow area with live audio/video",
     
     // Islamic Education Service
-    islamicEducationService: "Islamic Education",
-    islamicEducationServiceText: "We offer comprehensive Islamic education programs for all ages, from young children to adults. Our qualified teachers provide instruction in Quran, Arabic, and Islamic studies.",
+    islamicEducationService: "Quran Tafsir",
+    islamicEducationServiceText: "Deep dive into the meanings and interpretations of the Holy Quran.",
     
-    weekendSchool: "Weekend Islamic School",
+    // Youth Health and Wellness
+    youthHealthWellness: "Youth Health and Wellness",
+    youthHealthWellnessText: "We promote physical, mental, and spiritual wellness among our youth through comprehensive health programs and supportive community initiatives. We have a fitness facility in the center for our community members.",
+    
+    weekendSchool: "Weekend Islamic Education",
     weekendSchoolTime: "Saturdays, 10:30 AM - 2:00 PM",
-    weekendSchoolDesc: "Arabic language and Islamic studies for children ages 4-15.",
+    weekendSchoolDesc: "Islamic studies for children ages 4-15.",
     
     quranMemorization: "Quran Memorization (Hifz)",
     quranMemorizationTime: "Daily, 4:00 PM - 6:00 PM",
@@ -281,7 +285,7 @@ const translations = {
     faqAnswer4: "You can schedule an appointment with our Imam by calling the office during business hours or by filling out the contact form above. Please indicate the purpose of your meeting so we can best prepare to assist you.",
     
     faqQuestion5: "Do you have programs for children?",
-    faqAnswer5: "Yes! We have a vibrant weekend Islamic school for children ages 4-15, Quran memorization programs, youth groups for teenagers, and various activities throughout the year. Visit our Services page for more details.",
+    faqAnswer5: "Yes! We have a vibrant weekend Islamic education for children ages 4-15, Quran memorization programs, youth groups for teenagers, and various activities throughout the year. Visit our Services page for more details.",
     
     // Days of the week
     monday: "Monday",
@@ -318,7 +322,7 @@ const translations = {
     historyFeature3: "Youth and family programs",
     historyFeature4: "Philanthropic initiatives",
     historyFeature5: "Welcoming to all faiths",
-    historyFeature6: "Arabic school & Islamic studies",
+    historyFeature6: "Islamic studies",
     
     // Upcoming Events (Home Page)
     upcomingEvents: "Upcoming Events",
@@ -380,9 +384,9 @@ const translations = {
     quranAcademyFeature6: "Online Classes: Distance learning for those unable to attend in person",
     quranAcademyNote: "Registration open year-round. New students welcome at any time!",
     
-    // Madrasah Service (Services Page)
-    madrasahService: "Madrasah (Islamic School)",
-    madrasahServiceText1: "Our weekend Madrasah provides comprehensive Islamic education for children ages 4-16 in a fun, engaging environment. Classes run every Saturday and Sunday.",
+    // Islamic Education Service (Services Page)
+    madrasahService: "Islamic Education",
+    madrasahServiceText1: "Our weekend program provides comprehensive Islamic education for children ages 15-18 in a fun, engaging environment. Classes run every Saturday and Sunday.",
     madrasahServiceText2: "Students learn Arabic language, Islamic history, Fiqh, Aqeedah, character development, and memorization of essential Duas and Surahs.",
     madrasahLevel1: "Level 1 (Ages 4-6)",
     madrasahLevel1Time: "Sat & Sun, 9:00 AM - 11:00 AM",
@@ -415,12 +419,12 @@ const translations = {
     womensPrograms: "Women's Programs",
     womensProgramsText1: "We recognize the vital role of women in our community. Our women's programs provide spiritual growth, education, and sisterhood in a supportive environment.",
     womensProgramsText2: "From weekly halaqa circles to health and wellness programs, our sisters' activities cater to women of all ages and backgrounds.",
-    sistersHalaqa: "Sisters' Weekly Halaqa",
-    sistersHalaqaTime: "Thursdays, 10:00 AM - 12:00 PM",
+    sistersHalaqa: "Islamic Studies",
+    sistersHalaqaTime: "Weekdays 17:00 - 19:00",
     sistersHalaqaDesc: "Quran study, Islamic lectures, and discussion circle for women.",
-    womenHealth: "Women's Health & Wellness",
+    womenHealth: "Women's Monthly Program",
     womenHealthTime: "Monthly workshops",
-    womenHealthDesc: "Topics on physical, mental, and spiritual health from an Islamic perspective.",
+    womenHealthDesc: "Networking, friendship, Islamic lectures and community building activities",
     sistersCircle: "Sisters' Social Circle",
     sistersCircleTime: "Bi-weekly Fridays",
     sistersCircleDesc: "Networking, friendship, and community building activities.",
@@ -530,7 +534,7 @@ const translations = {
     
     ourMission: "Vores Mission",
     missionText: "Islamisk Center Vest Albertslund er dedikeret til at tjene det muslimske samfund og fremme interreligiøs forståelse. Vi stræber efter at tilbyde et imødekommende miljø for tilbedelse, uddannelse og fællesskabsopbygning.",
-    missionRooted: "Vores mission er forankret i Islams tidløse principper:",
+    missionRooted: "Vores mission afspejler vores engagement i socialt ansvar og menneskelig velfærd:",
     
     faith: "Tro (Iman)",
     faithDesc: "Styrke troen på Allah og Hans Budbringer",
@@ -563,8 +567,8 @@ const translations = {
     historyCommunityExpansionText: "Efterhånden som den muslimske befolkning voksede, voksede vores center også. Vi udvidede vores faciliteter til at omfatte klasseværelser, en samfundssal og forbedrede bønnerum.",
     
     historyEducation: "Uddannelsesprogrammer",
-    historyWeekendSchool: "Weekendskole Start",
-    historyWeekendSchoolText: "Vi etablerede vores weekend islamiske skoleprogram, der tilbyder Koran-uddannelse og islamiske studier til børn og voksne.",
+    historyWeekendSchool: "Weekenduddannelse Start",
+    historyWeekendSchoolText: "Vi etablerede vores weekend islamiske uddannelsesprogram, der tilbyder Koran-uddannelse og islamiske studier til børn og voksne.",
     
     historyCommunityService: "Samfundstjeneste",
     historyOutreach: "Outreach-initiativer",
@@ -623,21 +627,25 @@ const translations = {
     jumuahServiceTitle: "Jumu'ah (Fredag) Bøn",
     jumuahServiceText1: "Fredagsbønnen er højdepunktet i vores uge. Slut dig til hundredvis af samfundsmedlemmer til den ugentlige prædiken og bøn.",
     jumuahServiceText2: "Vi tilbyder flere Jumu'ah-tjenester for at imødekomme vores voksende samfund.",
-    jumuahFeature1: "Første Jumu'ah:",
-    jumuahFeature1Text: "Khutbah kl. 13:00, Bøn kl. 13:30",
-    jumuahFeature2: "Anden Jumu'ah:",
-    jumuahFeature2Text: "Khutbah kl. 14:00, Bøn kl. 14:30",
+    jumuahFeature1: "Jumu'ah:",
+    jumuahFeature1Text: "",
+    jumuahFeature2: "",
+    jumuahFeature2Text: "",
     jumuahFeature3: "Inspirerende khutbahs af vores resident lærde",
     jumuahFeature4: "Emner relevante for nutidens muslimske liv",
     jumuahFeature5: "Overløbsområde med live lyd/video",
     
     // Islamic Education Service
-    islamicEducationService: "Islamisk Uddannelse",
-    islamicEducationServiceText: "Vi tilbyder omfattende islamiske uddannelsesprogrammer for alle aldre, fra små børn til voksne. Vores kvalificerede lærere underviser i Koranen, arabisk og islamiske studier.",
+    islamicEducationService: "Quran Tafsir",
+    islamicEducationServiceText: "Dybtgående i betydningerne og fortolkningerne af den hellige Koran.",
     
-    weekendSchool: "Weekend Islamisk Skole",
+    // Youth Health and Wellness (Danish)
+    youthHealthWellness: "Ungdoms Sundhed og Velvære",
+    youthHealthWellnessText: "Vi fremmer fysisk, mental og åndelig velvære blandt vores unge gennem omfattende sundhedsprogrammer og støttende samfundsinitiativer. Vi har et fitnesscenter i bygningen til vores samfundsmedlemmer.",
+    
+    weekendSchool: "Weekend Islamisk Uddannelse",
     weekendSchoolTime: "Lørdage, 10:30 - 14:00",
-    weekendSchoolDesc: "Arabisk sprog og islamiske studier for børn i alderen 4-15.",
+    weekendSchoolDesc: "Islamiske studier for børn i alderen 4-15.",
     
     quranMemorization: "Koran-udenadslære (Hifz)",
     quranMemorizationTime: "Dagligt, 16:00 - 18:00",
@@ -783,7 +791,7 @@ const translations = {
     historyFeature3: "Ungdoms- og familieprogrammer",
     historyFeature4: "Filantropiske initiativer",
     historyFeature5: "Velkommen til alle trosretninger",
-    historyFeature6: "Arabisk skole og islamiske studier",
+    historyFeature6: "Islamiske studier",
     
     // Upcoming Events (Home Page)
     upcomingEvents: "Kommende Begivenheder",
@@ -813,9 +821,9 @@ const translations = {
     quranAcademyFeature6: "Online Klasser: Fjernundervisning for dem, der ikke kan deltage personligt",
     quranAcademyNote: "Tilmelding åben hele året. Nye studerende er velkommen når som helst!",
     
-    // Madrasah Service (Services Page - Danish)
-    madrasahService: "Madrasah (Islamisk Skole)",
-    madrasahServiceText1: "Vores weekend Madrasah giver omfattende islamisk uddannelse til børn i alderen 4-16 i et sjovt, engagerende miljø. Undervisning foregår hver lørdag og søndag.",
+    // Islamic Education Service (Services Page - Danish)
+    madrasahService: "Islamisk Uddannelse",
+    madrasahServiceText1: "Vores weekend program giver omfattende islamisk uddannelse til børn i alderen 15-18 i et sjovt, engagerende miljø. Undervisning foregår hver lørdag og søndag.",
     madrasahServiceText2: "Eleverne lærer arabisk sprog, islamisk historie, Fiqh, Aqeedah, karakterudvikling og memorering af essentielle Duas og Suraher.",
     madrasahLevel1: "Niveau 1 (Alder 4-6)",
     madrasahLevel1Time: "Lør & Søn, 09:00 - 11:00",
@@ -848,12 +856,12 @@ const translations = {
     womensPrograms: "Kvinders Programmer",
     womensProgramsText1: "Vi anerkender den vitale rolle, som kvinder spiller i vores samfund. Vores kvindeprogrammer giver åndelig vækst, uddannelse og søstersskab i et støttende miljø.",
     womensProgramsText2: "Fra ugentlige halaqa cirkler til sundheds- og wellnessprogrammer, vores søstres aktiviteter henvender sig til kvinder i alle aldre og baggrunde.",
-    sistersHalaqa: "Søstres Ugentlige Halaqa",
-    sistersHalaqaTime: "Torsdage, 10:00 - 12:00",
+    sistersHalaqa: "Islamiske Studier",
+    sistersHalaqaTime: "Hverdage 17:00 - 19:00",
     sistersHalaqaDesc: "Koranstudier, islamiske foredrag og diskussionskreds for kvinder.",
-    womenHealth: "Kvinders Sundhed & Velvære",
+    womenHealth: "Kvinders Månedlige Program",
     womenHealthTime: "Månedlige workshops",
-    womenHealthDesc: "Emner om fysisk, mental og åndelig sundhed fra et islamisk perspektiv.",
+    womenHealthDesc: "Netværk, venskab, islamiske foredrag og samfundsopbyggende aktiviteter",
     sistersCircle: "Søstres Sociale Cirkel",
     sistersCircleTime: "Hver anden fredag",
     sistersCircleDesc: "Netværk, venskab og samfundsopbyggende aktiviteter.",

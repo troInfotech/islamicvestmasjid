@@ -60,41 +60,6 @@ function translatePage(lang) {
 }
 
 // ===== Dark/Light Mode Toggle =====
-function initThemeToggle() {
-  // Check for saved theme preference or default to 'light'
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  
-  // Update toggle button icon
-  updateThemeIcon(currentTheme);
-  
-  // Add event listener to theme toggle button
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-}
-
-function updateThemeIcon(theme) {
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    const icon = themeToggle.querySelector('i');
-    if (icon) {
-      if (theme === 'dark') {
-        icon.className = 'fas fa-sun';
-      } else {
-        icon.className = 'fas fa-moon';
-      }
-    }
-  }
-}
 
 // ===== Mobile Navigation Toggle =====
 document.addEventListener('DOMContentLoaded', function() {
@@ -149,9 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // ===== Initialize Dark Mode =====
-  initThemeToggle();
-  
   // ===== Initialize Language Toggle =====
   initLanguageToggle();
 

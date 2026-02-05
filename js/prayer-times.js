@@ -113,6 +113,10 @@ function updatePrayerTimes(prayerData) {
       }
       
       element.textContent = cleanValue;
+      // Force display
+      element.style.display = 'block';
+      element.style.visibility = 'visible';
+      element.style.opacity = '1';
     }
   });
   
@@ -184,6 +188,11 @@ function timeToMinutes(timeStr) {
 async function loadPrayerTimes() {
   try {
     const response = await fetch('assets/data/Islamisk Center Vest - Masjid Salah-Timings.csv');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
     const csvText = await response.text();
     const prayerData = parseCSV(csvText);
     
@@ -200,6 +209,12 @@ async function loadPrayerTimes() {
       const today = findTodaysPrayerTimes(prayerData);
       if (today) highlightCurrentPrayer(today);
     }, 60000);
+    
+    // Initial highlight
+    const today = findTodaysPrayerTimes(prayerData);
+    if (today) {
+      highlightCurrentPrayer(today);
+    }
     
   } catch (error) {
     console.error('Error loading prayer times:', error);

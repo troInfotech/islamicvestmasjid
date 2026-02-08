@@ -2482,6 +2482,17 @@ img {
     max-width: 250px !important;
   }
   
+  /* Support Our Mission - Mobile Grid */
+  .donate-cta [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  
+  /* Hide vertical divider on mobile */
+  .donate-cta [style*="linear-gradient"] {
+    display: none !important;
+  }
+  
   /* Services Grid */
   .services-grid {
     gap: 20px;
@@ -2567,19 +2578,6 @@ img {
     font-size: 0.9rem !important;
     word-break: break-word;
     overflow-wrap: anywhere;
-  }
-  
-  .office-hours {
-    padding: 20px 15px !important;
-  }
-  
-  .office-hours h4 {
-    font-size: 1.1rem !important;
-  }
-  
-  .hours-list li {
-    font-size: 0.9rem !important;
-    padding: 10px 0;
   }
   
   /* Map Section */

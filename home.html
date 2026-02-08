@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20251225allgold">
+  <link rel="stylesheet" href="css/styles.css?v=20251225finalorder">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🕌%3C/text%3E%3C/svg%3E">
@@ -31,10 +31,10 @@
       </a>
       
       <ul class="nav-menu">
-        <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
         <li><a href="home.html" class="active" data-translate="home">Home</a></li>
-        <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
+        <li><a href="index.html" data-translate="prayerTimes">Prayer Times</a></li>
         <li><a href="services.html" data-translate="services">Services</a></li>
+        <li><a href="about.html" data-translate="aboutUs">About Us</a></li>
         <li><a href="contact.html" data-translate="contact">Contact</a></li>
         <li><a href="#donate" class="nav-donate" data-translate="donate">Donate</a></li>
       </ul>
@@ -63,21 +63,21 @@
         </div>
         
         <nav class="mobile-nav">
-          <a href="index.html" class="mobile-nav-link">
-            <i class="fas fa-clock"></i>
-            <span data-translate="prayerTimes">Prayer Times</span>
-          </a>
           <a href="home.html" class="mobile-nav-link active">
             <i class="fas fa-home"></i>
             <span data-translate="home">Home</span>
           </a>
-          <a href="about.html" class="mobile-nav-link">
-            <i class="fas fa-info-circle"></i>
-            <span data-translate="aboutUs">About Us</span>
+          <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-clock"></i>
+            <span data-translate="prayerTimes">Prayer Times</span>
           </a>
           <a href="services.html" class="mobile-nav-link">
             <i class="fas fa-hands-praying"></i>
             <span data-translate="services">Services</span>
+          </a>
+          <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-info-circle"></i>
+            <span data-translate="aboutUs">About Us</span>
           </a>
           <a href="contact.html" class="mobile-nav-link">
             <i class="fas fa-envelope"></i>
@@ -91,16 +91,12 @@
         
         <div class="mobile-menu-footer">
           <div class="mobile-contact-info">
-            <p><a href="https://maps.app.goo.gl/F3VWEAdoY5RbNxp26" target="_blank" rel="noopener" style="color: var(--white); text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Albertslund, Denmark</a></p>
-            <p><i class="fas fa-phone"></i> +45 XX XX XX XX</p>
-            <p><i class="fas fa-envelope"></i> info@icvalbertslund.dk</p>
+            <p><a href="https://maps.app.goo.gl/F3VWEAdoY5RbNxp26" target="_blank" rel="noopener" style="color: var(--white); text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Roskildevej 30 B, 2620 Albertslund</a></p>
+            <p><i class="fas fa-envelope"></i> info@icva.dk</p>
           </div>
           
           <div class="mobile-social-links">
             <a href="https://www.facebook.com/profile.php?id=100069541164154" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -282,8 +278,29 @@
     <div class="container">
       <h2 data-translate="supportMission">Support Our Mission</h2>
       <p data-translate="supportMissionDesc">Your generous donations help us maintain the masjid, run educational programs, and serve those in need.</p>
-      <div style="margin-top: 40px;">
-        <img src="assets/images/mobilepay/488994605_979780911016605_6665281071885374336_n.jpg" alt="MobilePay Donation" style="max-width: 300px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+      <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 40px; margin-top: 40px; align-items: center; max-width: 1100px; margin-left: auto; margin-right: auto;">
+        <!-- MobilePay Section -->
+        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+          <h3 style="color: var(--primary-gold); font-size: 1.8rem; margin-bottom: 20px;">MobilePay</h3>
+          <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <img src="assets/images/mobilepay/mobilepaygold.png" alt="MobilePay Donation" style="max-width: 350px; width: 100%; border-radius: 15px; display: block;">
+          </div>
+        </div>
+        
+        <!-- Gold Vertical Divider -->
+        <div style="width: 2px; height: 400px; background: linear-gradient(to bottom, transparent, var(--primary-gold), transparent); align-self: center;"></div>
+        
+        <!-- Masjid Membership Section -->
+        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+          <h3 style="color: var(--primary-gold); font-size: 1.8rem; margin-bottom: 20px;">Masjid Membership</h3>
+          <div style="background: rgba(255, 255, 255, 0.05); padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); width: 100%;">
+            <h4 style="color: var(--white); font-size: 1.3rem; margin-bottom: 25px;">Become a Member</h4>
+            <p style="color: var(--white); font-size: 1rem; margin-bottom: 20px;">Click below link to</p>
+            <a href="https://mc.mph1.com/icva/web/form" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--primary-gold); color: var(--midnight); font-size: 1.1rem; padding: 15px 30px; display: inline-block;">
+              Subscribe to Membership Today
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -297,9 +314,6 @@
           <p data-translate="footerAbout">A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/profile.php?id=100069541164154" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         
@@ -329,7 +343,6 @@
           <h4 data-translate="contactFooter">Contact</h4>
           <ul>
             <li><a href="https://maps.app.goo.gl/F3VWEAdoY5RbNxp26" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> <span data-translate="locationText">Albertslund, Denmark</span></a></li>
-            <li><i class="fas fa-phone"></i> <span data-translate="phoneText">+45 XX XX XX XX</span></li>
             <li><i class="fas fa-envelope"></i> <span data-translate="emailText">info@icvalbertslund.dk</span></li>
           </ul>
         </div>
@@ -342,8 +355,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20241224w"></script>
-  <script src="js/main.js?v=20251225a">
+  <script src="js/translations.js?v=20241224newaddr"></script>
+  <script src="js/main.js?v=20251225a"></script>
 </body>
 </html>
 

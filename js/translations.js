@@ -252,13 +252,13 @@ const translations = {
     getInTouchTitle: "Get In Touch",
     
     location: "Location",
-    locationText: "Albertslund, Denmark",
+    locationText: "Roskildevej 30 B, 2620 Albertslund",
     
     phone: "Phone",
     phoneText: "+45 XX XX XX XX",
     
     email: "Email",
-    emailText: "info@icvalbertslund.dk",
+    emailText: "info@icva.dk",
     
     followUs: "Follow Us",
     
@@ -282,7 +282,7 @@ const translations = {
     faqAnswer3: "Yes, we have a parking lot available for visitors. During Friday prayers and special events, parking can fill up quickly, so we recommend arriving early or using nearby street parking.",
     
     faqQuestion4: "How can I schedule a meeting with the Imam?",
-    faqAnswer4: "You can schedule an appointment with our Imam by calling the office during business hours or by filling out the contact form above. Please indicate the purpose of your meeting so we can best prepare to assist you.",
+    faqAnswer4: "You can schedule an appointment with our Imam by filling out the contact form above. Please indicate the purpose of your meeting so we can best prepare to assist you.",
     
     faqQuestion5: "Do you have programs for children?",
     faqAnswer5: "Yes! We have a vibrant weekend Islamic education for children ages 4-15, Quran memorization programs, youth groups for teenagers, and various activities throughout the year. Visit our Services page for more details.",
@@ -724,13 +724,13 @@ const translations = {
     getInTouchTitle: "Kom i Kontakt",
     
     location: "Lokation",
-    locationText: "Albertslund, Danmark",
+    locationText: "Roskildevej 30 B, 2620 Albertslund",
     
     phone: "Telefon",
     phoneText: "+45 XX XX XX XX",
     
     email: "E-mail",
-    emailText: "info@icvalbertslund.dk",
+    emailText: "info@icva.dk",
     
     followUs: "Følg Os",
     

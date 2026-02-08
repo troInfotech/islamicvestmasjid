@@ -213,8 +213,8 @@ img {
 
 /* ===== Language Toggle Button ===== */
 .lang-toggle {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(212, 168, 83, 0.3);
+  background: rgba(212, 168, 83, 0.2);
+  border: 2px solid var(--primary-gold);
   padding: 8px 12px;
   border-radius: 25px;
   color: var(--primary-gold);
@@ -229,6 +229,7 @@ img {
   min-width: 50px;
   height: 45px;
   font-family: 'Playfair Display', serif;
+  box-shadow: 0 2px 8px rgba(212, 168, 83, 0.3);
 }
 
 .lang-toggle:hover {
@@ -1925,10 +1926,14 @@ img {
   
   .lang-toggle {
     margin-left: 0;
-    min-width: 42px;
-    height: 38px;
-    padding: 8px 10px;
-    font-size: 0.85rem;
+    min-width: 50px;
+    height: 42px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    background: rgba(212, 168, 83, 0.25);
+    border: 2px solid var(--primary-gold);
+    box-shadow: 0 3px 10px rgba(212, 168, 83, 0.4);
+    font-weight: 800;
   }
   
   /* Hero Sections - Override inline styles */
@@ -2150,17 +2155,32 @@ img {
   }
   
   /* Navigation */
+  .navbar {
+    min-height: 60px;
+  }
+  
   .nav-container {
     padding: 0 10px;
+    gap: 8px;
+    justify-content: space-between;
   }
   
   .nav-logo {
-    gap: 8px;
-    padding: 10px 0;
+    gap: 0;
+    padding: 8px 0;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 55%;
   }
   
   .nav-logo img {
-    height: 32px;
+    height: 45px;
+    flex-shrink: 0;
+  }
+  
+  /* Hide logo text on very small screens to prevent overlap */
+  .nav-logo-text {
+    display: none !important;
   }
   
   .nav-logo-text .mosque-name {
@@ -2182,21 +2202,30 @@ img {
   }
   
   .nav-right {
-    gap: 6px;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: auto;
   }
   
-  .theme-toggle {
-    width: 34px;
-    height: 34px;
-    font-size: 0.9rem;
-    padding: 8px;
+  .nav-toggle {
+    padding: 5px;
+  }
+  
+  .nav-toggle span {
+    width: 20px;
   }
   
   .lang-toggle {
-    min-width: 36px;
-    height: 34px;
+    min-width: 42px;
+    height: 36px;
     font-size: 0.75rem;
-    padding: 5px 8px;
+    padding: 6px 8px;
+    background: rgba(212, 168, 83, 0.3);
+    border: 2px solid var(--primary-gold);
+    box-shadow: 0 3px 10px rgba(212, 168, 83, 0.5);
+    font-weight: 800;
+    border-radius: 18px;
+    margin-left: 0;
   }
   
   /* Hero sections - override inline styles */

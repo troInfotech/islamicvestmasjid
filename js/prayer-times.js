@@ -1,14 +1,14 @@
 // Prayer Times Display JavaScript
 // Loads prayer times from CSV and displays them based on current date
 
-// Parse CSV data
-function parseCSV(csv) {
+// Parse CSV data (supports both comma and semicolon delimiters)
+function parseCSV(csv, delimiter = ',') {
   const lines = csv.trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.trim());
+  const headers = lines[0].split(delimiter).map(h => h.trim());
   const data = [];
   
   for (let i = 1; i < lines.length; i++) {
-    const values = lines[i].split(',').map(v => v.trim());
+    const values = lines[i].split(delimiter).map(v => v.trim());
     const entry = {};
     headers.forEach((header, index) => {
       entry[header] = values[index];
@@ -184,6 +184,41 @@ function timeToMinutes(timeStr) {
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
 }
 
+// Load and update Friday (Jumu'ah) prayer times
+async function loadFridayPrayerTimes() {
+  try {
+    const response = await fetch('assets/data/Islamisk Center Vest - Masjid Salah-Timings - friday Prayer.csv');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const csvText = await response.text();
+    // This CSV uses semicolon as delimiter
+    const fridayData = parseCSV(csvText, ';');
+    
+    // Find today's Friday prayer times
+    const { day, month } = getCurrentDateInfo();
+    const todayFriday = fridayData.find(entry => 
+      parseInt(entry.Day) === day && parseInt(entry.Month) === month
+    );
+    
+    if (todayFriday) {
+      // Update Jumu'ah times display
+      const urduEl = document.getElementById('urduSpeechTime');
+      const danishEl = document.getElementById('danishSpeechTime');
+      const jamaatEl = document.getElementById('jamaatTime');
+      
+      if (urduEl) urduEl.textContent = todayFriday['Urdu Speech'] || '--:--';
+      if (danishEl) danishEl.textContent = todayFriday['Danish Speech'] || '--:--';
+      if (jamaatEl) jamaatEl.textContent = todayFriday['Jamaat'] || '--:--';
+    }
+    
+  } catch (error) {
+    console.error('Error loading Friday prayer times:', error);
+  }
+}
+
 // Load CSV and initialize
 async function loadPrayerTimes() {
   try {
@@ -199,6 +234,9 @@ async function loadPrayerTimes() {
     // Update prayer times
     updatePrayerTimes(prayerData);
     updateCurrentDate();
+    
+    // Load Friday prayer times
+    loadFridayPrayerTimes();
     
     // Update current time every second
     updateCurrentTime();

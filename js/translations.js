@@ -13,6 +13,11 @@ const translations = {
     prayerTimesTitle: "Daily Prayer Times",
     prayerTimesSubtitle: "Join us for congregational prayers",
     
+    // Jumu'ah (Friday Prayer) Times
+    urduSpeech: "Urdu Speech",
+    danishSpeech: "Danish Speech",
+    jamaat: "Jamaat",
+    
     // Home Page
     welcomeTitle: "Welcome to<br>Islamisk Center Vest",
     welcomeSubtitle: "A place of worship, learning, and community",
@@ -229,18 +234,6 @@ const translations = {
     marriageFeature6: "Family mediation services",
     scheduleConsultation: "Schedule a Consultation",
     
-    // Charity & Zakat
-    charityZakat: "Charity & Zakat",
-    charityZakatText: "We collect and distribute Zakat, Sadaqah, and Fitrah to support those in need. Your charitable contributions make a real difference in the lives of community members.",
-    charityFeature1: "Zakat collection and distribution",
-    charityFeature2: "Sadaqah and general charity",
-    charityFeature3: "Zakat al-Fitr collection before Eid",
-    charityFeature4: "Emergency financial assistance",
-    charityFeature5: "Food pantry and meal programs",
-    charityFeature6: "Scholarship funds for students",
-    charityFeature7: "Orphan sponsorship programs",
-    donateNow: "Donate Now",
-    
     // Need Services Section
     needServices: "Need Our Services?",
     needServicesDesc: "Contact us to learn more about any of our services or to schedule an appointment with our Imam.",
@@ -324,16 +317,15 @@ const translations = {
     historyFeature5: "Welcoming to all faiths",
     historyFeature6: "Islamic studies",
     
-    // Upcoming Events (Home Page)
-    upcomingEvents: "Upcoming Events",
-    upcomingEventsDesc: "Join us for these upcoming programs and gatherings",
-    december: "December",
-    event1Title: "Islamic Studies for Adults",
-    event1Desc: "Weekly Islamic studies class covering fundamentals of faith, Fiqh, and Seerah for ages 16+.",
-    event2Title: "Qur'an Tafsir Class",
-    event2Desc: "Deep dive into the meanings and interpretations of the Holy Quran with our resident scholar.",
-    event3Title: "Friday Night Youth Program",
-    event3Desc: "Engaging activities, discussions, and social time for young Muslims in our community.",
+    // Community Updates Section
+    communityUpdates: "Community Updates",
+    stayConnected: "Stay connected with our latest news and events",
+    
+    // Masjid Membership Section
+    masjidMembership: "Masjid Membership",
+    becomeMember: "Become a Member",
+    clickBelowLink: "Click below link to",
+    subscribeMembership: "Subscribe to Membership Today",
     
     // Youth Programs Service (Services Page)
     youthProgramsService: "Youth Programs",
@@ -448,28 +440,17 @@ const translations = {
     // Community Events (Services Page)
     communityEvents: "Community Events & Activities",
     communityEventsText1: "Throughout the year, we host various events that bring our community together in worship, celebration, and service. These gatherings strengthen our bonds and create lasting memories.",
-    communityEventsText2: "From Eid celebrations to charity drives, educational lectures to family fun days - there's always something happening at our center!",
+    communityEventsText2: "From Eid celebrations to educational lectures to family fun days - there's always something happening at our center!",
     eventFeature1: "Eid Celebrations: Grand celebrations for Eid al-Fitr and Eid al-Adha",
     eventFeature2: "Ramadan Programs: Taraweeh prayers, Iftar dinners, and I'tikaf",
     eventFeature3: "Islamic Heritage Month: Cultural celebrations and educational programs",
     eventFeature4: "Guest Speakers: Regular visits from renowned Islamic scholars",
     eventFeature5: "Community Iftars: Monthly community dinners throughout the year",
-    eventFeature6: "Charity Drives: Food collections, clothing drives, and fundraising events",
+    eventFeature6: "Community Gatherings: Food events, social gatherings, and community activities",
     eventFeature7: "Family Fun Days: Picnics, sports tournaments, and recreational activities",
     eventFeature8: "Interfaith Dialogues: Building bridges with other faith communities",
     eventsNote: "Stay updated on upcoming events through our newsletter and social media!",
     
-    // Charity & Zakat Service (Services Page)
-    charityZakatService: "Charity & Zakat Distribution",
-    charityZakatServiceText: "We collect and distribute Zakat, Sadaqah, and Fitrah to support those in need. Your charitable contributions make a real difference in the lives of community members locally and globally.",
-    charityFeature1: "Zakat Collection: Professional and transparent Zakat distribution",
-    charityFeature2: "Sadaqah Jariyah: Ongoing charity projects with lasting impact",
-    charityFeature3: "Zakat al-Fitr: End of Ramadan charity collection",
-    charityFeature4: "Emergency Aid: Quick response to community members in crisis",
-    charityFeature5: "Food Bank: Weekly food distribution to families in need",
-    charityFeature6: "Education Scholarships: Supporting students pursuing Islamic and secular education",
-    charityFeature7: "Global Relief: Supporting humanitarian projects worldwide",
-    charityFeature8: "Orphan Sponsorship: Long-term support for orphaned children"
   },
   
   da: {
@@ -484,6 +465,11 @@ const translations = {
     // Prayer Times Page
     prayerTimesTitle: "Daglige Bønnetider",
     prayerTimesSubtitle: "Tilslut dig os til fælles bønner",
+    
+    // Jumu'ah (Friday Prayer) Times
+    urduSpeech: "Urdu tale",
+    danishSpeech: "Dansk tale",
+    jamaat: "Jamaat",
     
     // Home Page
     welcomeTitle: "Velkommen til<br>Islamisk Center Vest",
@@ -701,18 +687,6 @@ const translations = {
     marriageFeature6: "Familiemægling",
     scheduleConsultation: "Book en Konsultation",
     
-    // Charity & Zakat
-    charityZakat: "Velgørenhed & Zakat",
-    charityZakatText: "Vi indsamler og distribuerer Zakat, Sadaqah og Fitrah for at støtte dem, der har brug for det. Dine velgørende bidrag gør en reel forskel i samfundsmedlemmers liv.",
-    charityFeature1: "Zakat-indsamling og distribution",
-    charityFeature2: "Sadaqah og generel velgørenhed",
-    charityFeature3: "Zakat al-Fitr indsamling før Eid",
-    charityFeature4: "Nødøkonomisk hjælp",
-    charityFeature5: "Madbank og måltidsprogrammer",
-    charityFeature6: "Stipendiefonde for studerende",
-    charityFeature7: "Forældreløse sponsorprogrammer",
-    donateNow: "Doner Nu",
-    
     // Need Services Section
     needServices: "Har Du Brug for Vores Tjenester?",
     needServicesDesc: "Kontakt os for at lære mere om nogen af vores tjenester eller for at aftale en tid med vores imam.",
@@ -793,16 +767,15 @@ const translations = {
     historyFeature5: "Velkommen til alle trosretninger",
     historyFeature6: "Islamiske studier",
     
-    // Upcoming Events (Home Page)
-    upcomingEvents: "Kommende Begivenheder",
-    upcomingEventsDesc: "Deltag i disse kommende programmer og sammenkomster",
-    december: "December",
-    event1Title: "Islamiske Studier for Voksne",
-    event1Desc: "Ugentlig islamisk studieundervisning, der dækker grundlæggende tro, Fiqh og Seerah for 16+.",
-    event2Title: "Koranen Tafsir Klasse",
-    event2Desc: "Dybt dyk i betydningerne og fortolkningerne af Den Hellige Koran med vores bofaste lærd.",
-    event3Title: "Fredag Aften Ungdomsprogram",
-    event3Desc: "Engagerende aktiviteter, diskussioner og socialt samvær for unge muslimer i vores samfund.",
+    // Community Updates Section
+    communityUpdates: "Fællesskabsopdateringer",
+    stayConnected: "Hold dig opdateret med vores seneste nyheder og begivenheder",
+    
+    // Masjid Membership Section
+    masjidMembership: "Masjid Medlemskab",
+    becomeMember: "Bliv Medlem",
+    clickBelowLink: "Klik på linket nedenfor for at",
+    subscribeMembership: "Tilmeld dig Medlemskab i Dag",
     
     // Fix missing key aliases
     fridayYouth: "Fredag Aften Ungdomsprogram",
@@ -885,28 +858,17 @@ const translations = {
     // Community Events (Services Page - Danish)
     communityEvents: "Fællesskabsbegivenheder & Aktiviteter",
     communityEventsText1: "Gennem hele året er vi vært for forskellige begivenheder, der bringer vores samfund sammen i tilbedelse, fejring og tjeneste. Disse sammenkomster styrker vores bånd og skaber varige minder.",
-    communityEventsText2: "Fra Eid-fejringer til velgørenhedskampagner, uddannelsesmæssige foredrag til familiesjovdage - der sker altid noget i vores center!",
+    communityEventsText2: "Fra Eid-fejringer til uddannelsesmæssige foredrag til familiesjovdage - der sker altid noget i vores center!",
     eventFeature1: "Eid Fejringer: Store fejringer for Eid al-Fitr og Eid al-Adha",
     eventFeature2: "Ramadan Programmer: Taraweeh bønner, Iftar middage og I'tikaf",
     eventFeature3: "Islamisk Arvemåned: Kulturelle fejringer og uddannelsesprogrammer",
     eventFeature4: "Gæstetalere: Regelmæssige besøg fra anerkendte islamiske lærde",
     eventFeature5: "Fællesskabs Iftars: Månedlige fællesskabsmiddage gennem hele året",
-    eventFeature6: "Velgørenhedskampagner: Madindsamlinger, tøjindsamlinger og fundraising begivenheder",
+    eventFeature6: "Fællesskabssamlinger: Madbegivenheder, sociale sammenkomster og fællesskabsaktiviteter",
     eventFeature7: "Familie Sjovdage: Picnics, sportturneringer og rekreative aktiviteter",
     eventFeature8: "Interreligiøse Dialoger: Bygge broer med andre trossamfund",
     eventsNote: "Hold dig opdateret om kommende begivenheder gennem vores nyhedsbrev og sociale medier!",
     
-    // Charity & Zakat Service (Services Page - Danish)
-    charityZakatService: "Velgørenhed & Zakat Distribution",
-    charityZakatServiceText: "Vi indsamler og distribuerer Zakat, Sadaqah og Fitrah for at støtte dem i nød. Dine velgørende bidrag gør en reel forskel i samfundsmedlemmers liv lokalt og globalt.",
-    charityFeature1: "Zakat Indsamling: Professionel og transparent Zakat distribution",
-    charityFeature2: "Sadaqah Jariyah: Løbende velgørenhedsprojekter med varig effekt",
-    charityFeature3: "Zakat al-Fitr: Slutningen af Ramadan velgørenhedsindsamling",
-    charityFeature4: "Nødhjælp: Hurtig respons til samfundsmedlemmer i krise",
-    charityFeature5: "Madbank: Ugentlig maddistribution til familier i nød",
-    charityFeature6: "Uddannelsesstipendier: Støtte til studerende, der forfølger islamisk og sekulær uddannelse",
-    charityFeature7: "Global Nødhjælp: Støtte til humanitære projekter verden over",
-    charityFeature8: "Forældreløse Sponsorering: Langsigtet støtte til forældreløse børn"
   }
 };
 

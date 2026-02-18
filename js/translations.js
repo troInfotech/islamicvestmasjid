@@ -320,6 +320,7 @@ const translations = {
     // Community Updates Section
     communityUpdates: "Community Updates",
     stayConnected: "Stay connected with our latest news and events",
+    visitFacebook: "Visit Our Facebook Page",
     
     // Masjid Membership Section
     masjidMembership: "Masjid Membership",
@@ -770,6 +771,7 @@ const translations = {
     // Community Updates Section
     communityUpdates: "Fællesskabsopdateringer",
     stayConnected: "Hold dig opdateret med vores seneste nyheder og begivenheder",
+    visitFacebook: "Besøg Vores Facebook Side",
     
     // Masjid Membership Section
     masjidMembership: "Masjid Medlemskab",

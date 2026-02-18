@@ -803,7 +803,7 @@ const translations = {
     historyFeature6: "Islamiske studier",
     
     // Community Updates Section
-    communityUpdates: "Fællesskabsopdateringer",
+    communityUpdates: "Fællesskabs&shy;opdateringer",
     stayConnected: "Hold dig opdateret med vores seneste nyheder og begivenheder",
     visitFacebook: "Besøg Vores Facebook Side",
     

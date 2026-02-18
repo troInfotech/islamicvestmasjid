@@ -1208,6 +1208,15 @@ img {
     font-size: 1rem;
   }
   
+  .community-updates-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .community-updates-title span[data-translate="communityUpdates"] {
+    word-break: break-word;
+    hyphens: manual;
+  }
+  
   .prayer-time-card {
     padding: 15px 10px;
     min-height: 160px;

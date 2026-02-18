@@ -30,6 +30,11 @@ function initLanguageToggle() {
       localStorage.setItem('language', newLang);
       updateLanguageButton(newLang);
       translatePage(newLang);
+      
+      // Update date display with new language (if function exists)
+      if (typeof updateCurrentDate === 'function') {
+        updateCurrentDate();
+      }
     });
   }
   

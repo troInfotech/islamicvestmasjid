@@ -856,24 +856,27 @@ img {
 }
 
 .jumua-display {
-  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);
+  background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
   padding: 20px 30px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(212, 168, 83, 0.4);
+  min-width: 280px;
 }
 
 .jumua-display .prayer-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 3px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin-bottom: 5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .jumua-display .prayer-name-arabic {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: rgba(212, 168, 83, 0.9);
+  margin-bottom: 10px;
 }
 
 .jumua-display .jumua-time {
@@ -886,33 +889,34 @@ img {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .jumua-time-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 8px 15px;
+  background: rgba(212, 168, 83, 0.2);
+  padding: 10px 15px;
+  border-left: 3px solid var(--primary-gold);
   border-radius: 8px;
   gap: 15px;
 }
 
 .jumua-label {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: white;
+  color: rgba(255, 255, 255, 0.95);
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .jumua-time-row .jumua-time {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
-  min-width: 50px;
+  min-width: 55px;
   text-align: right;
 }
 
@@ -1087,6 +1091,11 @@ img {
   
   .jumua-display {
     padding: 15px 20px;
+    min-width: 250px;
+  }
+  
+  .jumua-display .prayer-name {
+    font-size: 1.2rem;
   }
   
   .jumua-display .jumua-time {
@@ -1098,15 +1107,15 @@ img {
   }
   
   .jumua-time-row {
-    padding: 6px 12px;
+    padding: 8px 12px;
   }
   
   .jumua-label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   
   .jumua-time-row .jumua-time {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
   .prayer-times-grid {
@@ -1168,6 +1177,7 @@ img {
   
   .jumua-display {
     padding: 12px 15px;
+    min-width: 220px;
   }
   
   .jumua-display .jumua-time {
@@ -1175,7 +1185,7 @@ img {
   }
   
   .jumua-display .prayer-name {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .jumua-display .prayer-name-arabic {
@@ -1187,15 +1197,15 @@ img {
   }
   
   .jumua-time-row {
-    padding: 5px 10px;
+    padding: 7px 10px;
   }
   
   .jumua-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   
   .jumua-time-row .jumua-time {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   .prayer-time-card {

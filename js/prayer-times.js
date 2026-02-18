@@ -26,12 +26,27 @@ function getCurrentDateInfo() {
   const month = now.getMonth() + 1; // JavaScript months are 0-indexed
   const year = now.getFullYear();
   
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                  'July', 'August', 'September', 'October', 'November', 'December'];
+  // Get current language
+  const currentLang = localStorage.getItem('language') || 'en';
   
-  const dayName = days[now.getDay()];
-  const monthName = months[now.getMonth()];
+  // Day and month keys for translation lookup
+  const dayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const monthKeys = ['january', 'february', 'march', 'april', 'may', 'june', 
+                     'july', 'august', 'september', 'october', 'november', 'december'];
+  
+  // Get translated day and month names
+  let dayName, monthName;
+  if (typeof translations !== 'undefined' && translations[currentLang]) {
+    dayName = translations[currentLang][dayKeys[now.getDay()]] || dayKeys[now.getDay()];
+    monthName = translations[currentLang][monthKeys[now.getMonth()]] || monthKeys[now.getMonth()];
+  } else {
+    // Fallback to English
+    const defaultDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const defaultMonths = ['January', 'February', 'March', 'April', 'May', 'June', 
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+    dayName = defaultDays[now.getDay()];
+    monthName = defaultMonths[now.getMonth()];
+  }
   
   return { day, month, year, dayName, monthName };
 }

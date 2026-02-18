@@ -12,6 +12,9 @@ const translations = {
     // Prayer Times Page
     prayerTimesTitle: "Daily Prayer Times",
     prayerTimesSubtitle: "Join us for congregational prayers",
+    prayerQuote: "\"Indeed, prayer has been decreed upon the believers at specified times.\" - Quran 4:103",
+    ramadanCalendarTitle: "Ramadan Calendar 2026 - 1447",
+    ramadanCalendarDesc: "Complete Ramadan prayer times and calendar for Islamisk Center Vest Albertslund",
     
     // Jumu'ah (Friday Prayer) Times
     urduSpeech: "Urdu Speech",
@@ -290,6 +293,20 @@ const translations = {
     sunday: "Sunday",
     closed: "Closed",
     
+    // Months of the year
+    january: "January",
+    february: "February",
+    march: "March",
+    april: "April",
+    may: "May",
+    june: "June",
+    july: "July",
+    august: "August",
+    september: "September",
+    october: "October",
+    november: "November",
+    december: "December",
+    
     // Footer
     footerAbout: "A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.",
     quickLinks: "Quick Links",
@@ -466,6 +483,9 @@ const translations = {
     // Prayer Times Page
     prayerTimesTitle: "Daglige Bønnetider",
     prayerTimesSubtitle: "Tilslut dig os til fælles bønner",
+    prayerQuote: "\"Sandelig, bønnen er blevet foreskrevet for de troende på bestemte tidspunkter.\" - Koranen 4:103",
+    ramadanCalendarTitle: "Ramadan Kalender 2026 - 1447",
+    ramadanCalendarDesc: "Komplet Ramadan bønnetider og kalender for Islamisk Center Vest Albertslund",
     
     // Jumu'ah (Friday Prayer) Times
     urduSpeech: "Urdu tale",
@@ -743,6 +763,20 @@ const translations = {
     saturday: "Lørdag",
     sunday: "Søndag",
     closed: "Lukket",
+    
+    // Months of the year
+    january: "Januar",
+    february: "Februar",
+    march: "Marts",
+    april: "April",
+    may: "Maj",
+    june: "Juni",
+    july: "Juli",
+    august: "August",
+    september: "September",
+    october: "Oktober",
+    november: "November",
+    december: "December",
     
     // Footer
     footerAbout: "Et sted for tilbedelse, læring og fællesskab. Vi byder alle velkommen gennem vores døre og fremmer tro, tjeneste og enhed.",

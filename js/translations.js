@@ -461,7 +461,7 @@ const translations = {
     aboutUs: "Om Os",
     services: "Tjenester",
     contact: "Kontakt",
-    donate: "Doner",
+    donate: "Donere",
     
     // Prayer Times Page
     prayerTimesTitle: "Daglige Bønnetider",

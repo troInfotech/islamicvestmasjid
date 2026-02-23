@@ -1217,6 +1217,27 @@ img {
     hyphens: manual;
   }
   
+  /* Quote box mobile styles */
+  .quote-box {
+    min-height: auto !important;
+    padding: 30px 20px !important;
+  }
+  
+  .quote-icon {
+    font-size: 3rem !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .quote-text {
+    font-size: 1.3rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .quote-author {
+    font-size: 0.9rem !important;
+    margin-top: 12px !important;
+  }
+  
   .prayer-time-card {
     padding: 15px 10px;
     min-height: 160px;

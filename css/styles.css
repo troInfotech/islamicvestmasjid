@@ -1524,6 +1524,16 @@ img {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary-gold);
 }
 
 .service-card::before {

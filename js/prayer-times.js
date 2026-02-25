@@ -115,11 +115,9 @@ function updatePrayerTimes(prayerData) {
     if (element) {
       const timeValue = updates[elementId];
       
-      // Clean the value - only if it exists
       let cleanValue;
       if (timeValue && timeValue !== '' && timeValue !== undefined && timeValue !== null) {
         cleanValue = timeValue.trim();
-        // Only remove truly non-printable characters, keep digits, colons, and spaces
         if (!/^\d{1,2}:\d{2}$/.test(cleanValue)) {
           cleanValue = cleanValue.replace(/[^\d:]/g, '');
         }
@@ -128,10 +126,6 @@ function updatePrayerTimes(prayerData) {
       }
       
       element.textContent = cleanValue;
-      // Force display
-      element.style.display = 'block';
-      element.style.visibility = 'visible';
-      element.style.opacity = '1';
     }
   });
   
@@ -167,27 +161,75 @@ function highlightCurrentPrayer(todayTimes) {
     currentPrayer = 'isha';
   }
   
-  // Remove all highlights
+  // Remove all highlights from table rows
+  document.querySelectorAll('.prayer-times-table tbody tr').forEach(row => {
+    row.classList.remove('highlighted');
+  });
+  
+  // Add highlight to current prayer row
+  const currentRow = document.getElementById(currentPrayer + 'Row');
+  if (currentRow) {
+    currentRow.classList.add('highlighted');
+  }
+  
+  // Legacy support: Remove all highlights from cards (if they exist)
   document.querySelectorAll('.prayer-time-card').forEach(card => {
     card.classList.remove('highlighted');
   });
   
-  // Add highlight to current prayer - find by checking if adhan ID contains prayer name
+  // Legacy support: Add highlight to current prayer card
   document.querySelectorAll('.prayer-time-card').forEach(card => {
     const adhanElement = card.querySelector('.adhan-time');
     if (adhanElement && adhanElement.id.toLowerCase().includes(currentPrayer)) {
       card.classList.add('highlighted');
-      // Force iqamah time to show with white color when highlighted
-      const iqamahElement = card.querySelector('.iqamah-time');
-      if (iqamahElement) {
-        iqamahElement.style.color = 'white';
-        iqamahElement.style.display = 'block';
-        iqamahElement.style.visibility = 'visible';
-        iqamahElement.style.opacity = '1';
-        iqamahElement.style.fontSize = '1.4rem';
-        iqamahElement.style.fontWeight = '600';
-        iqamahElement.style.marginTop = '8px';
+    }
+  });
+}
+
+// Find tomorrow's prayer times
+function findTomorrowsPrayerTimes(prayerData) {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const day = tomorrow.getDate();
+  const month = tomorrow.getMonth() + 1;
+  
+  const tomorrowData = prayerData.find(entry => 
+    parseInt(entry.Day) === day && parseInt(entry.Month) === month
+  );
+  
+  return tomorrowData;
+}
+
+// Update tomorrow's times
+function updateTomorrowTimes(prayerData) {
+  const tomorrow = findTomorrowsPrayerTimes(prayerData);
+  
+  if (!tomorrow) {
+    return;
+  }
+  
+  const tomorrowUpdates = {
+    'fajrTomorrow': tomorrow['Fajr Iqamah'],
+    'dhuhrTomorrow': tomorrow['Dhuhr Iqamah'],
+    'asrTomorrow': tomorrow['Asr Iqamah'],
+    'maghribTomorrow': tomorrow['Maghrib Iqamah'],
+    'ishaTomorrow': tomorrow['Isha Iqamah']
+  };
+  
+  Object.keys(tomorrowUpdates).forEach(elementId => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const timeValue = tomorrowUpdates[elementId];
+      let cleanValue;
+      if (timeValue && timeValue !== '' && timeValue !== undefined && timeValue !== null) {
+        cleanValue = timeValue.trim();
+        if (!/^\d{1,2}:\d{2}$/.test(cleanValue)) {
+          cleanValue = cleanValue.replace(/[^\d:]/g, '');
+        }
+      } else {
+        cleanValue = '--:--';
       }
+      element.textContent = cleanValue;
     }
   });
 }
@@ -248,6 +290,7 @@ async function loadPrayerTimes() {
     
     // Update prayer times
     updatePrayerTimes(prayerData);
+    updateTomorrowTimes(prayerData);
     updateCurrentDate();
     
     // Load Friday prayer times

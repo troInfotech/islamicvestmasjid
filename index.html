@@ -148,42 +148,69 @@
           </div>
         </div>
         
-        <div class="prayer-times-grid">
-          
-          <div class="prayer-time-card">
-            <div class="prayer-name">Fajr</div>
-            <div class="prayer-name-arabic">فجر</div>
-            <div class="adhan-time" id="fajrAdhan" style="display: block !important; visibility: visible !important;">--:--</div>
-            <div class="iqamah-time" id="fajrIqamah" style="display: block !important; visibility: visible !important;">--:--</div>
-          </div>
-          
-          <div class="prayer-time-card highlighted">
-            <div class="prayer-name">Dhuhr</div>
-            <div class="prayer-name-arabic">ظهر</div>
-            <div class="adhan-time" id="dhuhrAdhan" style="display: block !important; visibility: visible !important;">--:--</div>
-            <div class="iqamah-time" id="dhuhrIqamah" style="display: block !important; visibility: visible !important;">--:--</div>
-          </div>
-          
-          <div class="prayer-time-card">
-            <div class="prayer-name">Asr</div>
-            <div class="prayer-name-arabic">عصر</div>
-            <div class="adhan-time" id="asrAdhan" style="display: block !important; visibility: visible !important;">--:--</div>
-            <div class="iqamah-time" id="asrIqamah" style="display: block !important; visibility: visible !important;">--:--</div>
-          </div>
-          
-          <div class="prayer-time-card">
-            <div class="prayer-name">Maghrib</div>
-            <div class="prayer-name-arabic">مغرب</div>
-            <div class="adhan-time" id="maghribAdhan" style="display: block !important; visibility: visible !important;">--:--</div>
-            <div class="iqamah-time" id="maghribIqamah" style="display: block !important; visibility: visible !important;">--:--</div>
-          </div>
-          
-          <div class="prayer-time-card">
-            <div class="prayer-name">Isha</div>
-            <div class="prayer-name-arabic">عشاء</div>
-            <div class="adhan-time" id="ishaAdhan" style="display: block !important; visibility: visible !important;">--:--</div>
-            <div class="iqamah-time" id="ishaIqamah" style="display: block !important; visibility: visible !important;">--:--</div>
-          </div>
+        <div class="prayer-times-table-container">
+          <table class="prayer-times-table">
+            <thead>
+              <tr>
+                <th class="col-salah">
+                  <span data-translate="salahHeader">Salah</span>
+                </th>
+                <th class="col-adhan">
+                  <span data-translate="adhanHeader">Adhan</span>
+                </th>
+                <th class="col-iqamah">
+                  <span data-translate="iqamahHeader">Iqamah</span>
+                  <span class="sub-header" data-translate="jamaatSubHeader">(Jamaat)</span>
+                </th>
+                <th class="col-tomorrow">
+                  <span data-translate="tomorrowHeader">Tomorrow</span>
+                  <span class="sub-header" data-translate="jamaatSubHeader">(Jamaat)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="fajrRow">
+                <td class="prayer-name-cell">
+                  <span class="prayer-name-en">Fajr</span>
+                </td>
+                <td class="adhan-cell" id="fajrAdhan">--:--</td>
+                <td class="iqamah-cell" id="fajrIqamah">--:--</td>
+                <td class="tomorrow-cell" id="fajrTomorrow">--:--</td>
+              </tr>
+              <tr id="dhuhrRow">
+                <td class="prayer-name-cell">
+                  <span class="prayer-name-en">Dhuhr</span>
+                </td>
+                <td class="adhan-cell" id="dhuhrAdhan">--:--</td>
+                <td class="iqamah-cell" id="dhuhrIqamah">--:--</td>
+                <td class="tomorrow-cell" id="dhuhrTomorrow">--:--</td>
+              </tr>
+              <tr id="asrRow">
+                <td class="prayer-name-cell">
+                  <span class="prayer-name-en">Asr</span>
+                </td>
+                <td class="adhan-cell" id="asrAdhan">--:--</td>
+                <td class="iqamah-cell" id="asrIqamah">--:--</td>
+                <td class="tomorrow-cell" id="asrTomorrow">--:--</td>
+              </tr>
+              <tr id="maghribRow">
+                <td class="prayer-name-cell">
+                  <span class="prayer-name-en">Maghrib</span>
+                </td>
+                <td class="adhan-cell" id="maghribAdhan">--:--</td>
+                <td class="iqamah-cell" id="maghribIqamah">--:--</td>
+                <td class="tomorrow-cell" id="maghribTomorrow">--:--</td>
+              </tr>
+              <tr id="ishaRow">
+                <td class="prayer-name-cell">
+                  <span class="prayer-name-en">Isha</span>
+                </td>
+                <td class="adhan-cell" id="ishaAdhan">--:--</td>
+                <td class="iqamah-cell" id="ishaIqamah">--:--</td>
+                <td class="tomorrow-cell" id="ishaTomorrow">--:--</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       

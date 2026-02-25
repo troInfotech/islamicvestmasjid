@@ -16,6 +16,13 @@ const translations = {
     ramadanCalendarTitle: "Ramadan Calendar 2026 - 1447",
     ramadanCalendarDesc: "Complete Ramadan prayer times and calendar for Islamisk Center Vest Albertslund",
     
+    // Prayer Times Table Headers
+    salahHeader: "Salah",
+    adhanHeader: "Adhan",
+    iqamahHeader: "Iqamah",
+    jamaatSubHeader: "(Jamaat)",
+    tomorrowHeader: "Tomorrow",
+    
     // Jumu'ah (Friday Prayer) Times
     urduSpeech: "Urdu Speech",
     danishSpeech: "Danish Speech",
@@ -485,6 +492,13 @@ const translations = {
     prayerQuote: "\"Sandelig, bønnen er blevet foreskrevet for de troende på bestemte tidspunkter.\" - Koranen 4:103",
     ramadanCalendarTitle: "Ramadan Kalender 2026 - 1447",
     ramadanCalendarDesc: "Komplet Ramadan bønnetider og kalender for Islamisk Center Vest Albertslund",
+    
+    // Prayer Times Table Headers
+    salahHeader: "Salah",
+    adhanHeader: "Adhan",
+    iqamahHeader: "Iqamah",
+    jamaatSubHeader: "(Jamaat)",
+    tomorrowHeader: "I morgen",
     
     // Jumu'ah (Friday Prayer) Times
     urduSpeech: "Urdu tale",

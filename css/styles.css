@@ -920,6 +920,117 @@ img {
   text-align: right;
 }
 
+/* Prayer Times Table Layout */
+.prayer-times-table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.prayer-times-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-times-table thead {
+  background: var(--primary-green);
+  color: white;
+}
+
+.prayer-times-table th {
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.prayer-times-table th .arabic-header {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 3px;
+}
+
+.prayer-times-table th .sub-header {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.prayer-times-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: var(--transition);
+}
+
+.prayer-times-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.prayer-times-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.prayer-times-table tbody tr.highlighted {
+  background: rgba(26, 93, 58, 0.08);
+}
+
+.prayer-times-table tbody tr.highlighted td {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.prayer-times-table tbody tr.highlighted .prayer-name-en {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.prayer-times-table td {
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.prayer-name-cell {
+  text-align: left !important;
+}
+
+.prayer-name-en {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: inline;
+}
+
+.prayer-name-ar {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-left: 12px;
+  display: inline;
+}
+
+.adhan-cell {
+  font-weight: 700;
+  color: var(--text-dark);
+  display: table-cell !important;
+}
+
+.iqamah-cell {
+  color: var(--text-dark);
+  display: table-cell !important;
+}
+
+.tomorrow-cell {
+  color: var(--text-light);
+  display: table-cell !important;
+}
+
+/* Old grid styles - keeping for backwards compatibility */
 .prayer-times-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1096,6 +1207,30 @@ img {
   
   .jumua-display .prayer-name {
     font-size: 1.2rem;
+  }
+  
+  /* Prayer table mobile styles */
+  .prayer-times-table th {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+  }
+  
+  .prayer-times-table th .arabic-header {
+    font-size: 0.8rem;
+  }
+  
+  .prayer-times-table td {
+    padding: 12px 10px;
+    font-size: 1rem;
+  }
+  
+  .prayer-name-en {
+    font-size: 1rem;
+  }
+  
+  .prayer-name-ar {
+    font-size: 0.85rem;
+    margin-left: 10px;
   }
   
   .jumua-display .jumua-time {

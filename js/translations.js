@@ -314,6 +314,17 @@ const translations = {
     november: "November",
     december: "December",
     
+    // Vedtægter Page
+    vedtaegterTitle: "Vedtægter",
+    vedtaegterSubtitle: "Islamisk Center Vest Albertslund — Vedtægte 2023",
+    vedtaegterDoc: "Vedtægter Dokument",
+    vedtaegterDocDesc: "Islamisk Center Vest Albertslund — Vedtægte 20.12.2023",
+    downloadPdf: "Download PDF",
+    openPdf: "Open in New Tab",
+    vedtaegterDate: "Date: 20th December 2023",
+    vedtaegterFormat: "Format: PDF",
+    vedtaegterLink: "Vedtægter",
+
     // Footer
     footerAbout: "A place of worship, learning, and community. We welcome everyone through our doors, fostering faith, service, and unity.",
     quickLinks: "Quick Links",
@@ -791,6 +802,17 @@ const translations = {
     november: "November",
     december: "December",
     
+    // Vedtægter Page
+    vedtaegterTitle: "Vedtægter",
+    vedtaegterSubtitle: "Islamisk Center Vest Albertslund — Vedtægte 2023",
+    vedtaegterDoc: "Vedtægter Dokument",
+    vedtaegterDocDesc: "Islamisk Center Vest Albertslund — Vedtægte 20.12.2023",
+    downloadPdf: "Download PDF",
+    openPdf: "Åbn i Ny Fane",
+    vedtaegterDate: "Dato: 20. december 2023",
+    vedtaegterFormat: "Format: PDF",
+    vedtaegterLink: "Vedtægter",
+
     // Footer
     footerAbout: "Et sted for tilbedelse, læring og fællesskab. Vi byder alle velkommen gennem vores døre og fremmer tro, tjeneste og enhed.",
     quickLinks: "Hurtige Links",

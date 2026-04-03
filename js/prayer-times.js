@@ -121,6 +121,7 @@ function updatePrayerTimes(prayerData) {
         if (!/^\d{1,2}:\d{2}$/.test(cleanValue)) {
           cleanValue = cleanValue.replace(/[^\d:]/g, '');
         }
+        cleanValue = applyDST(cleanValue);
       } else {
         cleanValue = '--:--';
       }
@@ -138,13 +139,13 @@ function highlightCurrentPrayer(todayTimes) {
   const now = new Date();
   const currentTime = now.getHours() * 60 + now.getMinutes();
   
-  // Convert prayer times to minutes
+  // Convert prayer times to minutes (apply DST offset so highlight matches displayed times)
   const prayers = [
-    { name: 'fajr', time: timeToMinutes(todayTimes['Fajr Adhan']) },
-    { name: 'dhuhr', time: timeToMinutes(todayTimes['Dhuhr Adhan']) },
-    { name: 'asr', time: timeToMinutes(todayTimes['Asr Adhan']) },
-    { name: 'maghrib', time: timeToMinutes(todayTimes['Maghrib Adhan']) },
-    { name: 'isha', time: timeToMinutes(todayTimes['Isha Adhan']) }
+    { name: 'fajr', time: timeToMinutes(applyDST(todayTimes['Fajr Adhan'])) },
+    { name: 'dhuhr', time: timeToMinutes(applyDST(todayTimes['Dhuhr Adhan'])) },
+    { name: 'asr', time: timeToMinutes(applyDST(todayTimes['Asr Adhan'])) },
+    { name: 'maghrib', time: timeToMinutes(applyDST(todayTimes['Maghrib Adhan'])) },
+    { name: 'isha', time: timeToMinutes(applyDST(todayTimes['Isha Adhan'])) }
   ];
   
   // Find current prayer (the one that has passed most recently)
@@ -226,12 +227,42 @@ function updateTomorrowTimes(prayerData) {
         if (!/^\d{1,2}:\d{2}$/.test(cleanValue)) {
           cleanValue = cleanValue.replace(/[^\d:]/g, '');
         }
+        cleanValue = applyDST(cleanValue);
       } else {
         cleanValue = '--:--';
       }
       element.textContent = cleanValue;
     }
   });
+}
+
+// Detect if current date falls within Daylight Saving Time
+// Denmark observes DST: last Sunday of March (02:00) → last Sunday of October (03:00)
+function isDST() {
+  const now = new Date();
+  const jan = new Date(now.getFullYear(), 0, 1);
+  const jul = new Date(now.getFullYear(), 6, 1);
+  // Standard offset is the larger (less negative) of the two
+  const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  return now.getTimezoneOffset() < stdOffset;
+}
+
+// Add one hour to a time string (HH:MM), handles midnight wrap-around
+function addOneHour(timeStr) {
+  if (!timeStr || timeStr === '--:--' || !/^\d{1,2}:\d{2}$/.test(timeStr.trim())) {
+    return timeStr;
+  }
+  const parts = timeStr.trim().split(':');
+  let hours = parseInt(parts[0]) + 1;
+  const minutes = parts[1];
+  if (hours >= 24) hours -= 24;
+  return String(hours).padStart(2, '0') + ':' + minutes;
+}
+
+// Apply DST offset to a time value if needed
+function applyDST(timeStr) {
+  if (isDST()) return addOneHour(timeStr);
+  return timeStr;
 }
 
 // Convert time string to minutes since midnight
